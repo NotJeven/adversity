@@ -1,0 +1,78 @@
+===========
+ ADVERSITY
+===========
+
+Players:
+	3v3
+	2v2 to 4v4
+
+Objective:
+	kill the other teams sun god
+	sun god is a blaze
+
+Collect powers/resources from pads
+	Fire Enchantment pad
+	Iron Material pad
+	Fire/Wood pad
+	Arrow/TNT pad
+	Strength pad
+	Regeneration pad
+	
+=========
+OBJECTIVE
+=========	
+	Blaze:
+		Doesn't Move
+			Slowness
+		Only spawns when activated
+			Gets teleported over and away when triggered
+			location in spawn chunks
+			named to prevent despawn
+				if other ways, use it
+		Only hits other team? 
+			fire resist to its teams?
+		
+==========
+MAJOR PADS
+==========
+Ench Pad:
+	On pad fully charged, item in hand:
+		Flame 1
+		Fire Aspect 1
+		Fire Prot 2
+
+Material Pad:
+	16 Iron per cycle
+	
+==========
+MINOR PADS
+==========
+Fire & Wood pad:
+	32 fire per cycle
+	16 logs (jungle) per cycle
+	
+Arrow & TNT Pad:
+	16 arrows per cycle
+	8 TNT per cycle
+	
+===========
+EFFECT PADS
+===========
+Strength pad:
+	strength 1 on cycle end
+	
+Regeneration pad
+	regeneration 2 on cycle end
+	
+	
+	
+	TO DO
+	
+		add blast resist to mob
+		
+		fix respawn
+		
+		mob balance
+		
+		change trigger
+		
