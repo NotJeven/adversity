@@ -11,10 +11,12 @@ Objective:
 	sun god is a blaze
 
 Collect powers/resources from pads
-	Fire Enchantment pad
-	Iron Material pad
-	Fire/Wood pad
-	Arrow/TNT pad
+	Enchantment pad
+	Materials pad
+	Wood/Hay pad
+	Gold/Chain pad
+	Arrow pad
+	TNT pad
 	Strength pad
 	Regeneration pad
 	
@@ -42,17 +44,28 @@ Ench Pad:
 		Fire Prot 2
 
 Material Pad:
-	16 Iron per cycle
-	
+	2 iron blocks per cycle
+	1 flint per cycle
+
 ==========
 MINOR PADS
 ==========
-Fire & Wood pad:
-	32 fire per cycle
-	16 logs (jungle) per cycle
+Wood pad:
+	5 logs (jungle) per cycle
 	
-Arrow & TNT Pad:
+Gold pad:
+	3 gold blocks per cycle
+
+Hay pad:
+	10 hay blocks per cycle
+
+Chain pad:
+	set of chain armor per cycle
+
+Arrow pad:
 	16 arrows per cycle
+	
+TNT pad:
 	8 TNT per cycle
 	
 ===========
@@ -63,16 +76,11 @@ Strength pad:
 	
 Regeneration pad
 	regeneration 2 on cycle end
-	
-	
-	
-	TO DO
-	
-		add blast resist to mob
-		
-		fix respawn
-		
-		mob balance
-		
-		change trigger
-		
+
+=====
+IDEAS
+=====
+swap wood pad for hay and saturation
+add dirt under trees
+make sapling drop rate higher
+
