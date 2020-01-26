@@ -18,6 +18,8 @@ scoreboard players operation #resetCountdown var = #15SECONDS var
 scoreboard players reset * deathCount
 scoreboard players reset * sidebarDisplay
 
+scoreboard players set @e[tag=pad] var 0
+
 team join ready §nSpectator
 team join notready §nLeft
 team join notready §nRight

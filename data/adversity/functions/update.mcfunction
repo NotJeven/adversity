@@ -90,7 +90,6 @@ execute as @e[tag=majorPad] if score @s var = #MAJORPADL14 var at @s run fill ~-
 # pad ticks/summon
 execute if score #gameState var = #RUNNING var run scoreboard players add @e[tag=minorPad,scores={var=1..}] var 1
 execute if score #gameState var = #RUNNING var run scoreboard players add @e[tag=majorPad,scores={var=1..}] var 1
-#clean this next line up
 execute if score #gameState var = #RUNNING var as @e[tag=objectivePad] if score @s var < #OBJECTIVECOOLDOWN var run scoreboard players add @e[tag=objectivePad,scores={var=1..}] var 1
 execute as @e[tag=minorPad] if score @s var > #MINORCOOLDOWN var run scoreboard players set @s var 0
 execute as @e[tag=majorPad] if score @s var > #MAJORCOOLDOWN var run scoreboard players set @s var 0
@@ -118,9 +117,12 @@ execute if score @e[tag=pad14,limit=1] var = #MAJORSUMMON var at @e[tag=pad14,li
 execute if score @e[tag=pad14,limit=1] var = #MAJORSUMMON var at @e[tag=pad14,limit=1] positioned ~-2 ~2 ~-3 run give @a[dx=4,dy=1,dz=6] minecraft:flint 1
 
 
-# objective triggers
+# objective summons
 execute if score @e[tag=pad15,limit=1] var = #OBJECTIVESUMMON var at @s run tp @e[tag=leftObjective] ~ ~3 ~
 execute if score @e[tag=pad16,limit=1] var = #OBJECTIVESUMMON var at @s run tp @e[tag=rightObjective] ~ ~3 ~
 
 # if the pad objects die for some reason....
-#execute as @e[type=area_effect_cloud,tag=pad] store result score #padCount var unless score #padsTotal var = #PADS var run function adversity:pad_objects
+execute as @e[type=area_effect_cloud,tag=pad] store result score #padCount var unless score #padsCount var = #PADS var run function adversity:pad_objects
+
+# make sure the blazes freeze
+execute if score #gameState var = #RUNNING run data merge entity @e[type=minecraft:blaze,limit=1] {Motion:[0.0,0.0,0.0]}
