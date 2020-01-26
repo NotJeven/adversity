@@ -16,7 +16,7 @@ execute if score #teamReadyB var = #TURNREADY var run playsound entity.horse.arm
 execute if score #teamReadyB var = #TURNREADY var run team join ready §nRight
 
 execute if score #teamReadyB var = #TURNNOTREADY var run tellraw @a[scores={triggerTeamReady=1},team=b] [{"text":"Your team is not ready"}]
-execute if score #teamReadyB var = #TURNNOTREADY var run title @a[scores={triggerTeamReady=1},team=b] subtitle [{"text":"Your team is not ready purple"}]
+execute if score #teamReadyB var = #TURNNOTREADY var run title @a[scores={triggerTeamReady=1},team=b] subtitle [{"text":"Your team is not ready"}]
 execute if score #teamReadyB var = #TURNNOTREADY var run title @a[scores={triggerTeamReady=1},team=b] title ""
 execute if score #teamReadyB var = #TURNNOTREADY var run playsound entity.horse.armor master @a[scores={triggerTeamReady=1},team=b] ~ ~ ~ 1 1 1
 execute if score #teamReadyB var = #TURNNOTREADY var run team join notready §nRight

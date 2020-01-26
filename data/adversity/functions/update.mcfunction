@@ -17,7 +17,7 @@ execute if entity @a[scores={sinceDeath=1..},tag=dead] run function adversity:al
 # Menu Requests
 
 tag @a[x=500,y=50,z=0,distance=0..1,tag=!menuRequest] add menuRequest
-execute if entity @a[x=500,y=50,z=0,distance=0..1,tag=menuRequest,tag=!menuTimeout] if score #menuHidden var = #FALSE var run function adversity:menu
+execute if entity @a[tag=menuRequest,tag=!menuTimeout] if score #menuHidden var = #FALSE var run function adversity:menu
 execute if entity @a[x=500,y=50,z=0,distance=0..1,tag=menuRequest,tag=menuAdmin,tag=!menuTimeout] if score #menuHidden var = #TRUE var run function adversity:menu_admin
 tag @a[x=500,y=50,z=0,distance=0..1] add menuTimeout
 tag @a[x=500,y=50,z=0,distance=1..,tag=menuTimeout] remove menuTimeout
