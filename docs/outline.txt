@@ -37,6 +37,8 @@ OBJECTIVE
 ==========
 MAJOR PADS
 ==========
+cycle: 14 second summon 14 second cooldown
+
 Ench Pad:
 	On pad fully charged, item in hand:
 		Flame 1
@@ -50,6 +52,8 @@ Material Pad:
 ==========
 MINOR PADS
 ==========
+cycle: 6 second summon 6 second cooldown
+
 Wood pad:
 	5 logs (jungle) per cycle
 	
@@ -71,6 +75,8 @@ TNT pad:
 ===========
 EFFECT PADS
 ===========
+cycle: 6 second summon 6 second cooldown
+
 Strength pad:
 	strength 1 on cycle end
 	

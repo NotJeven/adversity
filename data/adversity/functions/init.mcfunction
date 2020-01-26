@@ -41,6 +41,15 @@ scoreboard players set #10SECONDS var 200
 scoreboard players set #1 var 1
 scoreboard players set #0 var 0
 scoreboard players set #20 var 20
+
+# pad things
+scoreboard players set #PADS var 16
+scoreboard players set #MINORSUMMON var 120
+scoreboard players set #MINORCOOLDOWN var 240
+scoreboard players set #MAJORSUMMON var 280
+scoreboard players set #MAJORCOOLDOWN var 560
+scoreboard players set #OBJECTIVESUMMON var 20
+scoreboard players set #OBJECTIVECOOLDOWN var 0
 # END CONSTANTS
 
 # things to be only defined once

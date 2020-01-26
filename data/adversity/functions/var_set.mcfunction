@@ -9,7 +9,9 @@
 scoreboard players operation #teamReadyA var = #NOTREADY var 
 scoreboard players operation #teamReadyB var = #NOTREADY var
 scoreboard players operation #teamReadySpectator var = #READY var
+
 scoreboard players operation #gameState var = #IDLE var
+
 scoreboard players operation #gameCountdown var = #5SECONDS var
 scoreboard players operation #resetCountdown var = #15SECONDS var
 

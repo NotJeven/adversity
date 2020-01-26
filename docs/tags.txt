@@ -1,0 +1,23 @@
+initialized
+	marks players that have be initialized into the game
+
+dead
+	marks players that have died
+
+padTrigger
+	marks players who attempt pad activation
+
+pad
+	generic id for pad objects
+
+pad1 -> pad16
+	unique ids the pad objects
+
+majorPad
+	ids major pad objects (iron, enchat)
+
+minorPad
+	ids minor pad objects (basic resource, effect)
+
+objective
+	ids pads that summon objectives

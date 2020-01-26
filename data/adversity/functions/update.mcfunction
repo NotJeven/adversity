@@ -48,3 +48,13 @@ execute if score #gameState var = #END var if score #resetCountdown var > #10SEC
 execute if score #gameState var = #END var if score #resetCountdown var = #10SECONDS var run function adversity:game_reset_auto
 execute if score #gameState var = #END var if score #resetCountdown var < #10SECONDS var run function adversity:game_reset_auto_tick
 execute if score #gameState var = #END var if score #resetCountdown var < #0 var run function adversity:game_reset
+
+# pads
+execute as @a[team=a] at @s if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=true] if block ~ ~-1 ~ minecraft:end_portal_frame run tag @s add padTrigger
+execute as @a[team=b] at @s if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=true] if block ~ ~-1 ~ minecraft:end_portal_frame run tag @s add padTrigger
+
+execute if entity @a[tag=padTrigger] run function adversity:pad_trigger
+execute if score #gameState var = #RUNNING var run function adversity:pad_tick 
+
+# if the pad objects die for some reason....
+execute as @e[type=area_effect_cloud,tag=pad] store result score #padCount var unless score #padsTotal var = #PADS var run function adversity:pad_objects
