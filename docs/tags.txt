@@ -19,5 +19,5 @@ majorPad
 minorPad
 	ids minor pad objects (basic resource, effect)
 
-objective
+objectivePad
 	ids pads that summon objectives
