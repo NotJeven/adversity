@@ -16,8 +16,8 @@ tellraw @a[tag=!initialized] [{"text":"Version: ","color":"white"},{"text":"v0.1
 playsound minecraft:block.wooden_trapdoor.open master @a[tag=!initialized] ~ ~ ~ 2 1 1
 
 # move player
-teleport @a[tag=!initialized] 0 50 500 1 25
-spawnpoint @a[tag=!initialized] 0 50 500
+teleport @a[tag=!initialized] 500 50 0 1 25
+spawnpoint @a[tag=!initialized] 500 50 0
 
 # give menu
 execute if score #menuHidden var = #FALSE var run tag @a[tag=!initialized] add menuRequest
