@@ -12,7 +12,7 @@ scoreboard objectives add deathCount deathCount "Deaths"
 
 scoreboard objectives add triggerTeamJoin trigger
 scoreboard objectives add triggerTeamReady trigger
-scoreboard objectives add sidebarDisplay dummy "Wildflower"
+scoreboard objectives add sidebarDisplay dummy "Adversity"
 scoreboard objectives setdisplay sidebar sidebarDisplay
 
 # CONSTANTS
@@ -49,7 +49,29 @@ scoreboard players set #MINORCOOLDOWN var 240
 scoreboard players set #MAJORSUMMON var 280
 scoreboard players set #MAJORCOOLDOWN var 560
 scoreboard players set #OBJECTIVESUMMON var 20
-scoreboard players set #OBJECTIVECOOLDOWN var 0
+scoreboard players set #OBJECTIVECOOLDOWN var 25
+# pad lights; depends on the above variables
+scoreboard players set #MINORPADL1 var 2
+scoreboard players set #MINORPADL2 var 41
+scoreboard players set #MINORPADL3 var 81
+scoreboard players set #MINORPADL4 var 161
+scoreboard players set #MINORPADL5 var 201
+scoreboard players set #MINORPADL6 var 240
+
+scoreboard players set #MAJORPADL1 var 2
+scoreboard players set #MAJORPADL2 var 41
+scoreboard players set #MAJORPADL3 var 81
+scoreboard players set #MAJORPADL4 var 121
+scoreboard players set #MAJORPADL5 var 161
+scoreboard players set #MAJORPADL6 var 201
+scoreboard players set #MAJORPADL7 var 241
+scoreboard players set #MAJORPADL8 var 321
+scoreboard players set #MAJORPADL9 var 361
+scoreboard players set #MAJORPADL10 var 401
+scoreboard players set #MAJORPADL11 var 441
+scoreboard players set #MAJORPADL12 var 481
+scoreboard players set #MAJORPADL13 var 521
+scoreboard players set #MAJORPADL14 var 560
 # END CONSTANTS
 
 # things to be only defined once

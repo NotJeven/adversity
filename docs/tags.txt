@@ -21,3 +21,15 @@ minorPad
 
 objectivePad
 	ids pads that summon objectives
+
+leftLane
+	ids pads that are on the left lane
+
+rightLane
+	ids pads that are on the right lane
+
+leftObjective
+	ids the objective on the left side of the map
+
+rightObjective
+	ids the objective on the right side of the map

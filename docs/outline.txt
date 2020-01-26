@@ -70,7 +70,7 @@ Arrow pad:
 	16 arrows per cycle
 	
 TNT pad:
-	8 TNT per cycle
+	5 TNT per cycle
 	
 ===========
 EFFECT PADS
@@ -78,10 +78,10 @@ EFFECT PADS
 cycle: 6 second summon 6 second cooldown
 
 Strength pad:
-	strength 1 on cycle end
+	strength 1 @ 8 seconds on cycle end
 	
 Regeneration pad
-	regeneration 2 on cycle end
+	regeneration 2 @ 8 seconds on cycle end
 
 =====
 IDEAS
@@ -89,4 +89,6 @@ IDEAS
 swap wood pad for hay and saturation
 add dirt under trees
 make sapling drop rate higher
-
+remove arrows in favour of flint+feather pad
+remove tnt in favour of gunpowder pad
+turn tiledrops on/off

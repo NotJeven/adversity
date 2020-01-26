@@ -18,4 +18,9 @@ execute at @a[tag=padTrigger] if score @e[tag=minorPad,limit=1,sort=nearest] var
 execute at @a[tag=padTrigger] if score @e[tag=majorPad,limit=1,sort=nearest] var < #MAJORSUMMON var at @e[tag=majorPad,limit=1,sort=nearest] positioned ~-1 ~2 ~-1 run tellraw @a[dx=2,dy=1,dz=2] {"text":"summoning...","color":"gray"}
 execute at @a[tag=padTrigger] if score @e[tag=majorPad,limit=1,sort=nearest] var > #MAJORSUMMON var at @e[tag=majorPad,limit=1,sort=nearest] positioned ~-1 ~2 ~-1 run tellraw @a[dx=2,dy=1,dz=2] {"text":"cooldown...","color":"gray"}
 
+# close objectives
+execute at @a[tag=padTrigger] if score @e[tag=objectivePad,limit=1,sort=nearest,tag=leftLane] var = #OBJECTIVECOOLDOWN var run tp @e[tag=leftObjective,limit=1,sort=nearest] ~ 150 ~
+execute at @a[tag=padTrigger] if score @e[tag=objectivePad,limit=1,sort=nearest,tag=rightLane] var = #OBJECTIVECOOLDOWN var run tp @e[tag=rightObjective,limit=1,sort=nearest] ~ 150 ~
+execute at @a[tag=padTrigger] if score @e[tag=objectivePad,limit=1,sort=nearest] var = #OBJECTIVECOOLDOWN var run scoreboard players set @e[tag=objectivePad,limit=1,sort=nearest] var 0
+
 tag @a[tag=padTrigger] remove padTrigger

@@ -49,12 +49,78 @@ execute if score #gameState var = #END var if score #resetCountdown var = #10SEC
 execute if score #gameState var = #END var if score #resetCountdown var < #10SECONDS var run function adversity:game_reset_auto_tick
 execute if score #gameState var = #END var if score #resetCountdown var < #0 var run function adversity:game_reset
 
-# pads
+
+# pad triggers
 execute as @a[team=a] at @s if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=true] if block ~ ~-1 ~ minecraft:end_portal_frame run tag @s add padTrigger
 execute as @a[team=b] at @s if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=true] if block ~ ~-1 ~ minecraft:end_portal_frame run tag @s add padTrigger
 
 execute if entity @a[tag=padTrigger] run function adversity:pad_trigger
 execute if score #gameState var = #RUNNING var run function adversity:pad_tick 
 
+# pad lights
+execute as @e[tag=minorPad,tag=leftLane] if score @s var = #MINORPADL1 var at @s run fill ~1 ~1 ~2 ~1 ~1 ~2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=minorPad,tag=leftLane] if score @s var = #MINORPADL2 var at @s run fill ~0 ~1 ~2 ~0 ~1 ~2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=minorPad,tag=leftLane] if score @s var = #MINORPADL3 var at @s run fill ~-1 ~1 ~2 ~-1 ~1 ~2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=minorPad,tag=leftLane] if score @s var = #MINORPADL4 var at @s run fill ~0 ~1 ~2 ~0 ~1 ~2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=minorPad,tag=leftLane] if score @s var = #MINORPADL5 var at @s run fill ~1 ~1 ~2 ~1 ~1 ~2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=minorPad,tag=leftLane] if score @s var = #MINORPADL6 var at @s run fill ~1 ~1 ~2 ~1 ~1 ~2 minecraft:redstone_lamp[lit=false] replace minecraft:redstone_lamp
+
+execute as @e[tag=minorPad,tag=rightLane] if score @s var = #MINORPADL1 var at @s run fill ~-1 ~1 ~-2 ~-1 ~1 ~-2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=minorPad,tag=rightLane] if score @s var = #MINORPADL2 var at @s run fill ~0 ~1 ~-2 ~0 ~1 ~-2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=minorPad,tag=rightLane] if score @s var = #MINORPADL3 var at @s run fill ~1 ~1 ~-2 ~1 ~1 ~-2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=minorPad,tag=rightLane] if score @s var = #MINORPADL4 var at @s run fill ~0 ~1 ~-2 ~0 ~1 ~-2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=minorPad,tag=rightLane] if score @s var = #MINORPADL5 var at @s run fill ~-1 ~1 ~-2 ~-1 ~1 ~-2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=minorPad,tag=rightLane] if score @s var = #MINORPADL6 var at @s run fill ~-1 ~1 ~-2 ~-1 ~1 ~-2 minecraft:redstone_lamp[lit=false] replace minecraft:redstone_lamp
+
+execute as @e[tag=majorPad] if score @s var = #MAJORPADL1 var at @s run fill ~-3 ~1 ~3 ~-3 ~1 ~3 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=majorPad] if score @s var = #MAJORPADL2 var at @s run fill ~-3 ~1 ~2 ~-3 ~1 ~2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=majorPad] if score @s var = #MAJORPADL3 var at @s run fill ~-3 ~1 ~1 ~-3 ~1 ~1 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=majorPad] if score @s var = #MAJORPADL4 var at @s run fill ~-3 ~1 ~0 ~-3 ~1 ~0 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=majorPad] if score @s var = #MAJORPADL5 var at @s run fill ~-3 ~1 ~-1 ~-3 ~1 ~-1 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=majorPad] if score @s var = #MAJORPADL6 var at @s run fill ~-3 ~1 ~-2 ~-3 ~1 ~-2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=majorPad] if score @s var = #MAJORPADL7 var at @s run fill ~-3 ~1 ~-3 ~-3 ~1 ~-3 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=majorPad] if score @s var = #MAJORPADL8 var at @s run fill ~-3 ~1 ~-2 ~-3 ~1 ~-2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=majorPad] if score @s var = #MAJORPADL9 var at @s run fill ~-3 ~1 ~-1 ~-3 ~1 ~-1 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=majorPad] if score @s var = #MAJORPADL10 var at @s run fill ~-3 ~1 ~0 ~-3 ~1 ~0 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=majorPad] if score @s var = #MAJORPADL11 var at @s run fill ~-3 ~1 ~1 ~-3 ~1 ~1 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=majorPad] if score @s var = #MAJORPADL12 var at @s run fill ~-3 ~1 ~2 ~-3 ~1 ~2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=majorPad] if score @s var = #MAJORPADL13 var at @s run fill ~-3 ~1 ~3 ~-3 ~1 ~3 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
+execute as @e[tag=majorPad] if score @s var = #MAJORPADL14 var at @s run fill ~-3 ~1 ~3 ~-3 ~1 ~3 minecraft:redstone_lamp[lit=false] replace minecraft:redstone_lamp
+
+# pad ticks/summon
+execute if score #gameState var = #RUNNING var run scoreboard players add @e[tag=minorPad,scores={var=1..}] var 1
+execute if score #gameState var = #RUNNING var run scoreboard players add @e[tag=majorPad,scores={var=1..}] var 1
+#clean this next line up
+execute if score #gameState var = #RUNNING var as @e[tag=objectivePad] if score @s var < #OBJECTIVECOOLDOWN var run scoreboard players add @e[tag=objectivePad,scores={var=1..}] var 1
+execute as @e[tag=minorPad] if score @s var > #MINORCOOLDOWN var run scoreboard players set @s var 0
+execute as @e[tag=majorPad] if score @s var > #MAJORCOOLDOWN var run scoreboard players set @s var 0
+
+execute if score @e[tag=pad1,limit=1] var = #MINORSUMMON var at @e[tag=pad1,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:jungle_log 5
+execute if score @e[tag=pad2,limit=1] var = #MINORSUMMON var at @e[tag=pad2,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:gold_block 3
+execute if score @e[tag=pad3,limit=1] var = #MINORSUMMON var at @e[tag=pad3,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:arrow 16
+execute if score @e[tag=pad4,limit=1] var = #MINORSUMMON var at @e[tag=pad4,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:tnt 5
+
+execute if score @e[tag=pad5,limit=1] var = #MINORSUMMON var at @e[tag=pad5,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=b,dx=2,dy=1,dz=2] run effect give @a[team=b] minecraft:strength 8 1 false
+execute if score @e[tag=pad6,limit=1] var = #MINORSUMMON var at @e[tag=pad6,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=b,dx=2,dy=1,dz=2] run effect give @a[team=b] minecraft:regeneration 8 2 false
+
+execute if score @e[tag=pad7,limit=1] var = #MINORSUMMON var at @e[tag=pad7,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:jungle_log 5
+execute if score @e[tag=pad8,limit=1] var = #MINORSUMMON var at @e[tag=pad8,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:gold_block 3
+execute if score @e[tag=pad9,limit=1] var = #MINORSUMMON var at @e[tag=pad9,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:arrow 16
+execute if score @e[tag=pad10,limit=1] var = #MINORSUMMON var at @e[tag=pad10,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:tnt 5
+
+execute if score @e[tag=pad11,limit=1] var = #MINORSUMMON var at @e[tag=pad11,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=a,dx=2,dy=1,dz=2] run effect give @a[team=a] minecraft:strength 8 1 false
+execute if score @e[tag=pad12,limit=1] var = #MINORSUMMON var at @e[tag=pad12,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=a,dx=2,dy=1,dz=2] run effect give @a[team=a] minecraft:regeneration 8 2 false
+
+execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] positioned ~-2 ~2 ~-3 run enchant @a[dx=4,dy=1,dz=6] minecraft:flame 1
+execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] positioned ~-2 ~2 ~-3 run enchant @a[dx=4,dy=1,dz=6] minecraft:fire_aspect 1
+execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] positioned ~-2 ~2 ~-3 run enchant @a[dx=4,dy=1,dz=6] minecraft:fire_protection 3
+execute if score @e[tag=pad14,limit=1] var = #MAJORSUMMON var at @e[tag=pad14,limit=1] positioned ~-2 ~2 ~-3 run give @a[dx=4,dy=1,dz=6] minecraft:iron_block 2
+execute if score @e[tag=pad14,limit=1] var = #MAJORSUMMON var at @e[tag=pad14,limit=1] positioned ~-2 ~2 ~-3 run give @a[dx=4,dy=1,dz=6] minecraft:flint 1
+
+
+# objective triggers
+execute if score @e[tag=pad15,limit=1] var = #OBJECTIVESUMMON var at @s run tp @e[tag=leftObjective] ~ ~3 ~
+execute if score @e[tag=pad16,limit=1] var = #OBJECTIVESUMMON var at @s run tp @e[tag=rightObjective] ~ ~3 ~
+
 # if the pad objects die for some reason....
-execute as @e[type=area_effect_cloud,tag=pad] store result score #padCount var unless score #padsTotal var = #PADS var run function adversity:pad_objects
+#execute as @e[type=area_effect_cloud,tag=pad] store result score #padCount var unless score #padsTotal var = #PADS var run function adversity:pad_objects

@@ -8,24 +8,24 @@
 kill @e[type=area_effect_cloud,tag=pad]
 
 # blue resource
-summon area_effect_cloud 541 34 -24 {Duration:2147483647,Tags:["pad","pad1","minorPad"]}
-summon area_effect_cloud 554 31 -11 {Duration:2147483647,Tags:["pad","pad2","minorPad"]}
-summon area_effect_cloud 565 45 -18 {Duration:2147483647,Tags:["pad","pad3","minorPad"]}
-summon area_effect_cloud 578 44 -20 {Duration:2147483647,Tags:["pad","pad4","minorPad"]}
+summon area_effect_cloud 541 34 -24 {Duration:2147483647,Tags:["pad","pad1","minorPad","leftLane"]}
+summon area_effect_cloud 554 31 -11 {Duration:2147483647,Tags:["pad","pad2","minorPad","leftLane"]}
+summon area_effect_cloud 565 45 -18 {Duration:2147483647,Tags:["pad","pad3","minorPad","leftLane"]}
+summon area_effect_cloud 578 44 -20 {Duration:2147483647,Tags:["pad","pad4","minorPad","leftLane"]}
 
 #red effect
-summon area_effect_cloud 571 23 -13 {Duration:2147483647,Tags:["pad","pad5","minorPad"]}
-summon area_effect_cloud 583 38 -14 {Duration:2147483647,Tags:["pad","pad6","minorPad"]}
+summon area_effect_cloud 571 23 -13 {Duration:2147483647,Tags:["pad","pad5","minorPad","leftLane"]}
+summon area_effect_cloud 583 38 -14 {Duration:2147483647,Tags:["pad","pad6","minorPad","leftLane"]}
 
 # red resource
-summon area_effect_cloud 541 34 24 {Duration:2147483647,Tags:["pad","pad1","minorPad"]}
-summon area_effect_cloud 554 31 11 {Duration:2147483647,Tags:["pad","pad2","minorPad"]}
-summon area_effect_cloud 565 45 18 {Duration:2147483647,Tags:["pad","pad3","minorPad"]}
-summon area_effect_cloud 578 44 20 {Duration:2147483647,Tags:["pad","pad4","minorPad"]}
+summon area_effect_cloud 541 34 24 {Duration:2147483647,Tags:["pad","pad1","minorPad","rightLane"]}
+summon area_effect_cloud 554 31 11 {Duration:2147483647,Tags:["pad","pad2","minorPad","rightLane"]}
+summon area_effect_cloud 565 45 18 {Duration:2147483647,Tags:["pad","pad3","minorPad","rightLane"]}
+summon area_effect_cloud 578 44 20 {Duration:2147483647,Tags:["pad","pad4","minorPad","rightLane"]}
 
 # blue effect
-summon area_effect_cloud 571 23 13 {Duration:2147483647,Tags:["pad","pad5","minorPad"]}
-summon area_effect_cloud 583 38 14 {Duration:2147483647,Tags:["pad","pad6","minorPad"]}
+summon area_effect_cloud 571 23 13 {Duration:2147483647,Tags:["pad","pad5","minorPad","rightLane"]}
+summon area_effect_cloud 583 38 14 {Duration:2147483647,Tags:["pad","pad6","minorPad","rightLane"]}
 
 # majors
 summon area_effect_cloud 594 41 0 {Duration:2147483647,Tags:["pad","pad13","majorPad"]}
