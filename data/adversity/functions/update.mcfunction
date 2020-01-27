@@ -51,8 +51,10 @@ execute if score #gameState var = #END var if score #resetCountdown var < #0 var
 
 
 # pad triggers
-execute as @a[team=a] at @s if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=true] if block ~ ~-1 ~ minecraft:end_portal_frame run tag @s add padTrigger
-execute as @a[team=b] at @s if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=true] if block ~ ~-1 ~ minecraft:end_portal_frame run tag @s add padTrigger
+execute as @a[team=a,tag=!padTriggered] at @s if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=true] if block ~ ~-1 ~ minecraft:end_portal_frame run tag @s add padTrigger
+execute as @a[team=b,tag=!padTriggered] at @s if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=true] if block ~ ~-1 ~ minecraft:end_portal_frame run tag @s add padTrigger
+
+execute as @a[tag=padTriggered] at @s at @e[tag=pad,limit=1,sort=nearest] positioned ~ ~2 ~ if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=false] run tag @s[distance=0.5..] remove padTriggered
 
 execute if entity @a[tag=padTrigger] run function adversity:pad_trigger
 execute if score #gameState var = #RUNNING var run function adversity:pad_tick 
@@ -122,7 +124,9 @@ execute if score @e[tag=pad15,limit=1] var = #OBJECTIVESUMMON var at @s run tp @
 execute if score @e[tag=pad16,limit=1] var = #OBJECTIVESUMMON var at @s run tp @e[tag=rightObjective] ~ ~3 ~
 
 # if the pad objects die for some reason....
-execute as @e[type=area_effect_cloud,tag=pad] store result score #padCount var unless score #padsCount var = #PADS var run function adversity:pad_objects
+execute if score #padCount var > #0 var run scoreboard players set #padCount var 0
+execute as @e[tag=pad] run scoreboard players add #padCount var 1
+execute unless score #padCount var = #PADS var run function adversity:pad_objects
 
 # make sure the blazes freeze
-execute if score #gameState var = #RUNNING run data merge entity @e[type=minecraft:blaze,limit=1] {Motion:[0.0,0.0,0.0]}
+execute if score #gameState var = #RUNNING var run data merge entity @e[type=minecraft:blaze,limit=1] {Motion:[0.0,0.0,0.0]}

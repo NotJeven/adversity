@@ -7,6 +7,9 @@ dead
 padTrigger
 	marks players who attempt pad activation
 
+padTriggered
+	marks players who have triggered a pad but not left the trigger space
+
 pad
 	generic id for pad objects
 
@@ -33,3 +36,9 @@ leftObjective
 
 rightObjective
 	ids the objective on the right side of the map
+
+itemPad
+	ids minor pad objects that have item summons
+
+effectPad 
+	ids minor pad objects that have effect summons
