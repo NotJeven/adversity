@@ -36,6 +36,7 @@ scoreboard players set #FALSE var 0
 # time
 scoreboard players set #1SECOND var 20
 scoreboard players set #10SECONDS var 200
+scoreboard players set #5SECONDS var 100
 
 # numbers
 scoreboard players set #1 var 1
