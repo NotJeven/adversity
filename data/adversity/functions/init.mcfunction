@@ -84,7 +84,7 @@ scoreboard players operation #menuHidden var = #FALSE var
 team add a "Left"
 team modify a color blue
 team add b "Right"
-team modify purple color red
+team modify b color red
 team add spectator "Spectator"
 team modify spectator color gray
 
