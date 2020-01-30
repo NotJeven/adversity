@@ -49,12 +49,10 @@ execute if score #gameState var = #END var if score #resetCountdown var = #10SEC
 execute if score #gameState var = #END var if score #resetCountdown var < #10SECONDS var run function adversity:game_reset_auto_tick
 execute if score #gameState var = #END var if score #resetCountdown var < #0 var run function adversity:game_reset
 
-
 # pad triggers
-execute as @a[team=a,tag=!padTriggered] at @s if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=true] if block ~ ~-1 ~ minecraft:end_portal_frame run tag @s add padTrigger
-execute as @a[team=b,tag=!padTriggered] at @s if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=true] if block ~ ~-1 ~ minecraft:end_portal_frame run tag @s add padTrigger
-
 execute as @a[tag=padTriggered] at @s at @e[tag=pad,limit=1,sort=nearest] positioned ~ ~2 ~ if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=false] run tag @s[distance=0.5..] remove padTriggered
+execute at @a[team=a,tag=!padTriggered] at @s if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=true] if block ~ ~-1 ~ minecraft:end_portal_frame run tag @s add padTrigger
+execute at @a[team=b,tag=!padTriggered] at @s if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=true] if block ~ ~-1 ~ minecraft:end_portal_frame run tag @s add padTrigger
 
 execute if entity @a[tag=padTrigger] run function adversity:pad_trigger
 execute if score #gameState var = #RUNNING var run function adversity:pad_tick 
@@ -89,13 +87,14 @@ execute as @e[tag=majorPad] if score @s var = #MAJORPADL12 var at @s run fill ~-
 execute as @e[tag=majorPad] if score @s var = #MAJORPADL13 var at @s run fill ~-3 ~1 ~3 ~-3 ~1 ~3 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
 execute as @e[tag=majorPad] if score @s var = #MAJORPADL14 var at @s run fill ~-3 ~1 ~3 ~-3 ~1 ~3 minecraft:redstone_lamp[lit=false] replace minecraft:redstone_lamp
 
-# pad ticks/summon
+# pad ticks
 execute if score #gameState var = #RUNNING var run scoreboard players add @e[tag=minorPad,scores={var=1..}] var 1
 execute if score #gameState var = #RUNNING var run scoreboard players add @e[tag=majorPad,scores={var=1..}] var 1
-execute if score #gameState var = #RUNNING var as @e[tag=objectivePad] if score @s var < #OBJECTIVECOOLDOWN var run scoreboard players add @e[tag=objectivePad,scores={var=1..}] var 1
+execute if score #gameState var = #RUNNING var run scoreboard players add @e[tag=objectivePad,scores={var=1..24}] var 1
 execute as @e[tag=minorPad] if score @s var > #MINORCOOLDOWN var run scoreboard players set @s var 0
 execute as @e[tag=majorPad] if score @s var > #MAJORCOOLDOWN var run scoreboard players set @s var 0
 
+# pad summon
 execute if score @e[tag=pad1,limit=1] var = #MINORSUMMON var at @e[tag=pad1,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:jungle_log 5
 execute if score @e[tag=pad2,limit=1] var = #MINORSUMMON var at @e[tag=pad2,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:gold_block 3
 execute if score @e[tag=pad3,limit=1] var = #MINORSUMMON var at @e[tag=pad3,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:arrow 16
@@ -120,8 +119,10 @@ execute if score @e[tag=pad14,limit=1] var = #MAJORSUMMON var at @e[tag=pad14,li
 
 
 # objective summons
-execute if score @e[tag=pad15,limit=1] var = #OBJECTIVESUMMON var at @s run tp @e[tag=leftObjective] ~ ~3 ~
-execute if score @e[tag=pad16,limit=1] var = #OBJECTIVESUMMON var at @s run tp @e[tag=rightObjective] ~ ~3 ~
+execute if score @e[tag=pad15,limit=1] var = #OBJECTIVESUMMON var at @e[tag=pad15,limit=1] run tp @e[tag=leftObjective] ~ ~3 ~
+execute if score @e[tag=pad15,limit=1] var = #OBJECTIVESUMMON var run data merge entity @e[tag=leftObjective,limit=1] {Invulnerable:0b,Silent:0b,Glowing:1b}
+execute if score @e[tag=pad16,limit=1] var = #OBJECTIVESUMMON var at @e[tag=pad16,limit=1] run tp @e[tag=rightObjective] ~ ~3 ~
+execute if score @e[tag=pad16,limit=1] var = #OBJECTIVESUMMON var run data merge entity @e[tag=rightObjective,limit=1] {Invulnerable:0b,Silent:0b,Glowing:1b}
 
 # if the pad objects die for some reason....
 execute if score #padCount var > #0 var run scoreboard players set #padCount var 0
@@ -129,4 +130,5 @@ execute as @e[tag=pad] run scoreboard players add #padCount var 1
 execute unless score #padCount var = #PADS var run function adversity:pad_objects
 
 # make sure the blazes freeze
-execute if score #gameState var = #RUNNING var run data merge entity @e[type=minecraft:blaze,limit=1] {Motion:[0.0,0.0,0.0]}
+execute if score #gameState var = #RUNNING var run data merge entity @e[tag=leftObjective,limit=1] {Motion:[0.0,0.0,0.0]}
+execute if score #gameState var = #RUNNING var run data merge entity @e[tag=rightObjective,limit=1] {Motion:[0.0,0.0,0.0]}

@@ -11,8 +11,10 @@ tellraw @a {"translate":"adversity.game.start"}
 scoreboard players operation #gameState var = #RUNNING var
 gamemode survival @a[team=a]
 gamemode survival @a[team=b]
-spreadplayers 19.5 545.5 1 2 false @a[team=a]
-spreadplayers -18.5 545.5 1 2 false @a[team=b]
+spreadplayers 504 -26 1 1 true @a[team=a]
+spreadplayers 504 26 1 1 true @a[team=b]
+spawnpoint @a[team=a] 504 37 -26
+spawnpoint @a[team=b] 504 37 26
 kill @e[type=blaze]
-execute at @e[tag=objectivePad,tag=leftLane] run summon blaze ~ ~100 ~ {PersistenceRequired:true,Health:400f,Tags:["objectiveLeft"]}
-execute at @e[tag=objectivePad,tag=rightLane] run summon blaze ~ ~100 ~ {PersistenceRequired:true,Health:400f,Tags:["objectiveRight"]}
+execute at @e[tag=pad15] run summon blaze ~ ~ ~ {PersistenceRequired:true,AbsorptionAmount:400f,Tags:["leftObjective"],Invulnerable:1b,Silent:1b,Glowing:0b}
+execute at @e[tag=pad16] run summon blaze ~ ~ ~ {PersistenceRequired:true,AbsorptionAmount:400f,Tags:["rightObjective"],Invulnerable:1b,Silent:1b,Glowing:0b}
