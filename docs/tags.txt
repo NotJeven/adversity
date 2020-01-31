@@ -4,6 +4,12 @@ initialized
 dead
 	marks players that have died
 
+inBounds
+	marks players that are in bounds
+
+toggleBounds
+	marks a player's bounds toggle state
+	
 padTrigger
 	marks players who attempt pad activation
 

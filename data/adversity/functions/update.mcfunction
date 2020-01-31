@@ -132,3 +132,13 @@ execute unless score #padCount var = #PADS var run function adversity:pad_object
 # make sure the blazes freeze
 execute if score #gameState var = #RUNNING var run data merge entity @e[tag=leftObjective,limit=1] {Motion:[0.0,0.0,0.0]}
 execute if score #gameState var = #RUNNING var run data merge entity @e[tag=rightObjective,limit=1] {Motion:[0.0,0.0,0.0]}
+
+# map bounds; toggleBounds = true when confirmed outside of play area
+tag @a[tag=inBounds] remove inBounds
+execute as @a[team=!,tag=!inBounds] at @s if entity @s[y=0,dy=59] if block ~ 255 ~ minecraft:barrier run tag @s add inBounds
+# in bounds but confirmed outside
+execute as @a[team=!,tag=inBounds,tag=toggleBounds] if entity @s run function adversity:in_bounds
+# outside bounds but not confirmed
+execute as @a[team=!,tag=!inBounds,tag=!toggleBounds] if entity @s run function adversity:out_bounds
+# still outside
+execute as @a[team=!,tag=!inBounds,tag=toggleBounds] if entity @s run title @s actionbar {"text":"⚠ outside building area ⚠"}
