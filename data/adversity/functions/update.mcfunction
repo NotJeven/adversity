@@ -42,6 +42,8 @@ execute if score #gameState var = #COUNTDOWN var if score #gameCountdown var < #
 execute if score #gameState var = #COUNTDOWN var if score #gameCountdown var < #0 var run function adversity:game_start
 
 # game win condition
+execute if score #gameState var = #RUNNING var unless entity @e[tag=leftObjective] run function adversity:game_end
+execute if score #gameState var = #RUNNING var unless entity @e[tag=rightObjective] run function adversity:game_end
 
 # auto reset 
 execute if score #gameState var = #END var if score #resetCountdown var > #10SECONDS var run scoreboard players operation #resetCountdown var -= #1 var
