@@ -9,7 +9,10 @@
 # do a tick of feedback (sound, text) every second
 scoreboard players operation #gameCountdownSecond var = #gameCountdown var
 scoreboard players operation #gameCountdownSecond var %= #1SECOND var
-execute if score #gameCountdownSecond var = #0 var run function adversity:game_countdown_second
+execute if score #gameCountdownSecond var = #0 var if score #gameCountdown var > #0 var run function adversity:game_countdown_second
+
+# start the game!
+execute if score #gameState var = #COUNTDOWN var if score #gameCountdown var < #0 var run function adversity:game_start
 
 # decrease the counter
 scoreboard players operation #gameCountdown var -= #1 var

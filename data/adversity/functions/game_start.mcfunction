@@ -3,18 +3,16 @@
 #	Activator:
 #		if #gameState = #COUNTDOWN if #gameCountdown < #0 
 #	Parents:
-#		adversity:update
+#		adversity:game_countdown_tick
 
-
-tellraw @a {"translate":"adversity.game.start"}
-#playsound <sound> <source> @a [x] [y] [z] [volume] [pitch] [minimumVolume]
+tellraw @a ""
 scoreboard players operation #gameState var = #RUNNING var
 gamemode survival @a[team=a]
 gamemode survival @a[team=b]
-#spreadplayers 504 -26 1 1 true @a[team=a]
-#spreadplayers 504 26 1 1 true @a[team=b]
-tp @a[team=a] 504 37 -26 -90 0
-tp @a[team=b] 504 37 26 -90 0
+spreadplayers 504 -26 1 1 true @a[team=a]
+spreadplayers 504 26 1 1 true @a[team=b]
+execute as @a[team=a] at @s run tp @s ~ 37 ~ -90 0
+execute as @a[team=b] at @s run tp @s ~ 37 ~ -90 0
 
 spawnpoint @a[team=a] 504 37 -26
 spawnpoint @a[team=b] 504 37 26

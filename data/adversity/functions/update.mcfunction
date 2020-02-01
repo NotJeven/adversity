@@ -16,7 +16,7 @@ execute if entity @a[scores={sinceDeath=1..},tag=dead] run function adversity:al
 
 # Menu Requests
 
-tag @a[x=500,y=50,z=0,distance=0..1,tag=!menuRequest] add menuRequest
+tag @a[x=500,y=50,z=0,distance=0..1,tag=!menuRequest,tag=!menuTimeout] add menuRequest
 execute if entity @a[tag=menuRequest,tag=!menuTimeout] if score #menuHidden var = #FALSE var run function adversity:menu
 execute if entity @a[x=500,y=50,z=0,distance=0..1,tag=menuRequest,tag=menuAdmin,tag=!menuTimeout] if score #menuHidden var = #TRUE var run function adversity:menu_admin
 tag @a[x=500,y=50,z=0,distance=0..1] add menuTimeout
@@ -38,8 +38,7 @@ execute if score #gameState var = #COUNTDOWN var if score #teamReadyB var = #NOT
 execute if score #gameState var = #COUNTDOWN var if score #teamReadyA var = #NOTREADY var run function adversity:game_countdown_stop
 execute if score #gameState var = #COUNTDOWN var if score #teamReadySpectator var = #NOTREADY var run function adversity:game_countdown_stop
 
-execute if score #gameState var = #COUNTDOWN var if score #gameCountdown var < #5SECONDS var run function adversity:game_countdown_tick
-execute if score #gameState var = #COUNTDOWN var if score #gameCountdown var < #0 var run function adversity:game_start
+execute if score #gameState var = #COUNTDOWN var if score #gameCountdown var < #COUNTDOWNTIME var run function adversity:game_countdown_tick
 
 # game win condition
 execute if score #gameState var = #RUNNING var unless entity @e[tag=leftObjective] run function adversity:game_end

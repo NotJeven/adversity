@@ -12,3 +12,4 @@ function adversity:var_set
 execute if score #menuHidden var = #FALSE var run tag @a add menuRequest
 team leave @a[team=!spectator]
 gamemode spectator @a[gamemode=!spectator]
+scoreboard objectives setdisplay sidebar sidebarDisplay

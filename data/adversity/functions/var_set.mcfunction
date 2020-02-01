@@ -12,7 +12,7 @@ scoreboard players operation #teamReadySpectator var = #READY var
 
 scoreboard players operation #gameState var = #IDLE var
 
-scoreboard players operation #gameCountdown var = #5SECONDS var
+scoreboard players operation #gameCountdown var = #COUNTDOWNTIME var
 scoreboard players operation #resetCountdown var = #15SECONDS var
 
 scoreboard players reset * deathCount

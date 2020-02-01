@@ -5,6 +5,7 @@
 #	Parents:
 #		adversity:game_countdown_tick
 
-#playsound <sound> <source> <player> [x] [y] [z] [volume] [pitch] [minimumVolume]
-#tellraw <player> <raw json message>
-tellraw @a ">>> 1 second less than last time"
+execute as @a at @s run playsound minecraft:block.note_block.banjo master @s ~ ~ ~ 1 0.5
+scoreboard players operation #gameCountSecondDisplay var = #gameCountdown var
+scoreboard players operation #gameCountSecondDisplay var /= #1SECOND var
+tellraw @a [{"text":">>> ","color":"white"},{"score":{"name":"#gameCountSecondDisplay","objective":"var"},"color":"green"}]

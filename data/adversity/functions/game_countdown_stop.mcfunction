@@ -7,4 +7,4 @@
 #		adversity:update
 
 scoreboard players operation #gameState var = #IDLE var 
-scoreboard players operation #gameCountdown var = #5SECONDS var
+scoreboard players operation #gameCountdown var = #COUNTDOWNTIME var

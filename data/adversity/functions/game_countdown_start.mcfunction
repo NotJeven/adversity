@@ -5,10 +5,9 @@
 #	Parents:
 #		adversity:update
 
-tellraw @a {"translate":"adversity.game.start.countdown"}
-#playsound <sound> <source> <player> [x] [y] [z] [volume] [pitch] [minimumVolume]
+tellraw @a [{"text":"The match will ","color":"white"},{"text":"start","color":"green"},{"text":" in...","color":"white"}]
 
 scoreboard players operation #gameState var = #COUNTDOWN var
 
-scoreboard players operation #gameCountdown var = #5SECONDS var
+scoreboard players operation #gameCountdown var = #COUNTDOWNTIME var
 scoreboard players operation #gameCountdown var -= #1 var
