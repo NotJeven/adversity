@@ -29,8 +29,8 @@ execute at @a[tag=padTrigger] if score @e[tag=majorPad,limit=1,sort=nearest,dist
 execute at @a[tag=padTrigger] if score @e[tag=objectivePad,limit=1,sort=nearest,distance=..3] var < #OBJECTIVESUMMON var at @e[tag=objectivePad,limit=1,sort=nearest] positioned ~-1 ~2 ~-1 run tellraw @a[dx=2,dy=1,dz=2] {"text":"summoning...","color":"gray"}
 
 # close objectives
-execute at @a[tag=padTrigger] if score @e[tag=pad15,limit=1,sort=nearest,distance=..3] var = #OBJECTIVECOOLDOWN var at @e[tag=pad15,limit=1] run tp @e[tag=leftObjective,limit=1,sort=nearest] ~ ~-3 ~
-execute at @a[tag=padTrigger] if score @e[tag=pad16,limit=1,sort=nearest,distance=..3] var = #OBJECTIVECOOLDOWN var at @e[tag=pad16,limit=1] run tp @e[tag=rightObjective,limit=1,sort=nearest] ~ ~-3 ~
+execute at @a[tag=padTrigger] if score @e[tag=pad15,limit=1,sort=nearest,distance=..3] var = #OBJECTIVECOOLDOWN var at @e[tag=pad15,limit=1] run tp @e[tag=leftObjective,limit=1,sort=nearest] ~ ~ ~
+execute at @a[tag=padTrigger] if score @e[tag=pad16,limit=1,sort=nearest,distance=..3] var = #OBJECTIVECOOLDOWN var at @e[tag=pad16,limit=1] run tp @e[tag=rightObjective,limit=1,sort=nearest] ~ ~ ~
 execute at @a[tag=padTrigger] if score @e[tag=pad15,limit=1,sort=nearest,distance=..3] var = #OBJECTIVECOOLDOWN var run data merge entity @e[tag=leftObjective,limit=1] {Invulnerable:1b,Silent:1b,Glowing:0b}
 execute at @a[tag=padTrigger] if score @e[tag=pad16,limit=1,sort=nearest,distance=..3] var = #OBJECTIVECOOLDOWN var run data merge entity @e[tag=rightObjective,limit=1] {Invulnerable:1b,Silent:1b,Glowing:0b}
 

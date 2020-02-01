@@ -93,5 +93,14 @@ team modify ready color green
 team add notready
 team modify notready color red
 
+# boss bars
+bossbar add adversity:left ""
+bossbar set adversity:left color blue
+bossbar set adversity:left max 300
+
+bossbar add adversity:right ""
+bossbar set adversity:right color red
+bossbar set adversity:right max 300
+
 # initializes/sets all the variables
 function adversity:var_set
