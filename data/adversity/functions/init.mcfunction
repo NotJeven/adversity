@@ -85,7 +85,7 @@ scoreboard players operation #menuHidden var = #FALSE var
 team add a "Left"
 team modify a color blue
 team add b "Right"
-team modify b color red
+team modify b color yellow
 team add spectator "Spectator"
 team modify spectator color gray
 
@@ -100,7 +100,7 @@ bossbar set adversity:left color blue
 bossbar set adversity:left max 300
 
 bossbar add adversity:right ""
-bossbar set adversity:right color red
+bossbar set adversity:right color yellow
 bossbar set adversity:right max 300
 
 # initializes/sets all the variables

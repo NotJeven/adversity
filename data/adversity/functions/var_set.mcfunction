@@ -21,9 +21,9 @@ scoreboard players reset * sidebarDisplay
 scoreboard players set @e[tag=pad] var 0
 
 team join ready §nSpectator
-team join notready §nLeft
-team join notready §nRight
+team join notready §nBlue
+team join notready §nYellow
 # these are here since sidebarDisplay is cleared
-scoreboard players set §nLeft sidebarDisplay 5
-scoreboard players set §nRight sidebarDisplay 3
+scoreboard players set §nBlue sidebarDisplay 5
+scoreboard players set §nYellow sidebarDisplay 3
 scoreboard players set §nSpectator sidebarDisplay 1

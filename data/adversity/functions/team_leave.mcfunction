@@ -11,15 +11,16 @@ team leave @a[scores={triggerTeamJoin=-1}]
 clear @a[scores={triggerTeamJoin=-1}]
 
 # flavour
-tellraw @a[scores={triggerTeamJoin=-1}] [{"text":"You have abandoned your team."}]
-title @a[scores={triggerTeamJoin=-1}] subtitle [{"text":"You have abandoned your team."}]
+tellraw @a[scores={triggerTeamJoin=-1}] [{"text":"You have "},{"text":"abandoned","color":"gray"},{"text":" your team."}]
+title @a[scores={triggerTeamJoin=-1}] subtitle [{"text":"You have "},{"text":"abandoned","color":"gray"},{"text":" your team."}]
 title @a[scores={triggerTeamJoin=-1}] title ""
-#playsound <sound> <source> @a[scores={triggerTeamJoin=-1}] [x] [y] [z] [volume] [pitch] [minimumVolume]
+playsound minecraft:entity.ender_dragon.flap master @a[scores={triggerTeamJoin=-1}] ~ ~ ~ 1 .7 1
 scoreboard players reset @a[scores={triggerTeamJoin=-1}] sidebarDisplay 
 
 # menu
 execute if score #menuHidden var = #FALSE var run tag @a[scores={triggerTeamJoin=-1}] add menuRequest
 execute if entity @a[tag=menuRequest] run function adversity:menu
 
+scoreboard players reset @a[scores={triggerTeamJoin=-1}] triggerTeamReady
 
 scoreboard players set @a[scores={triggerTeamJoin=-1}] triggerTeamJoin 0

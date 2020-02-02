@@ -9,8 +9,8 @@
 team join b @a[scores={triggerTeamJoin=2}]
 
 # flavour
-tellraw @a[scores={triggerTeamJoin=2}] [{"text":"Joined Right/Red"}]
-title @a[scores={triggerTeamJoin=2}] subtitle [{"text":"Joined Right/Red"}]
+tellraw @a[scores={triggerTeamJoin=2}] [{"text":"You rallied with the ","color":"white"},{"text":"Yellow","color":"yellow"},{"text":" banners.","color":"white"}]
+title @a[scores={triggerTeamJoin=2}] subtitle [{"text":"You rallied with the ","color":"white"},{"text":"Yellow","color":"yellow"},{"text":" banners.","color":"white"}]
 title @a[scores={triggerTeamJoin=2}] title ""
 playsound entity.horse.armor master @a[scores={triggerTeamJoin=2}] ~ ~ ~ 1 1 1
 scoreboard players set @a[scores={triggerTeamJoin=2}] sidebarDisplay 2

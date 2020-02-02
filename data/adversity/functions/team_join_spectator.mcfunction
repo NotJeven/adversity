@@ -13,8 +13,8 @@ tag @a[scores={triggerTeamJoin=3}] add giveItems
 function wildflower:give_items
 
 # flavour
-tellraw @a[scores={triggerTeamJoin=3}] [{"text":"Joined Spectator"}]
-title @a[scores={triggerTeamJoin=3}] subtitle [{"text":"Joined Spectator"}]
+tellraw @a[scores={triggerTeamJoin=3}] [{"text":"You hid with the ","color":"white"},{"text":"Spectators","color":"gray"},{"text":".","color":"white"}]
+title @a[scores={triggerTeamJoin=3}] subtitle [{"text":"You hid with the ","color":"white"},{"text":"Spectators","color":"gray"},{"text":".","color":"white"}]
 title @a[scores={triggerTeamJoin=3}] title ""
 playsound entity.horse.armor master @a[scores={triggerTeamJoin=3}] ~ ~ ~ 1 1 1
 scoreboard players set @a[scores={triggerTeamJoin=3}] sidebarDisplay 0

@@ -6,6 +6,7 @@
 #		adversity:game_countdown_tick
 
 tellraw @a ""
+playsound minecraft:block.bell.use master @a ~ ~ ~ 1 0 1
 scoreboard players operation #gameState var = #RUNNING var
 gamemode survival @a[team=a]
 gamemode survival @a[team=b]
@@ -26,3 +27,8 @@ team join a @e[tag=leftObjective]
 team join b @e[tag=rightObjective]
 bossbar set adversity:left players @a
 bossbar set adversity:right players @a
+
+scoreboard players reset @a[team=a] triggerTeamJoin
+scoreboard players reset @a[team=a] triggerTeamReady
+scoreboard players reset @a[team=b] triggerTeamJoin
+scoreboard players reset @a[team=b] triggerTeamJoin

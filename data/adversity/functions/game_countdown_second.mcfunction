@@ -5,7 +5,7 @@
 #	Parents:
 #		adversity:game_countdown_tick
 
-execute as @a at @s run playsound minecraft:block.note_block.banjo master @s ~ ~ ~ 1 0.5
+playsound minecraft:block.note_block.hat master @a ~ ~ ~ 1 0.9 1
 scoreboard players operation #gameCountSecondDisplay var = #gameCountdown var
 scoreboard players operation #gameCountSecondDisplay var /= #1SECOND var
 tellraw @a [{"text":">>> ","color":"white"},{"score":{"name":"#gameCountSecondDisplay","objective":"var"},"color":"green"}]
