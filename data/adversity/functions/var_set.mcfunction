@@ -27,3 +27,7 @@ team join notready §nYellow
 scoreboard players set §nBlue sidebarDisplay 5
 scoreboard players set §nYellow sidebarDisplay 3
 scoreboard players set §nSpectator sidebarDisplay 1
+
+# hide bossbar
+bossbar set adversity:left visible false
+bossbar set adversity:right visible false
