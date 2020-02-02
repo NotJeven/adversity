@@ -19,4 +19,7 @@ function adversity:menu_admin
 clear @a[gamemode=!spectator]
 gamemode spectator @a[gamemode=!spectator]
 
+experience set @a 0 levels
+experience set @a 0
+
 scoreboard players operation #gameState var = #END var

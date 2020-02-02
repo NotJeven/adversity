@@ -45,10 +45,10 @@ execute if score #gameState var = #RUNNING var unless entity @e[tag=leftObjectiv
 execute if score #gameState var = #RUNNING var unless entity @e[tag=rightObjective] run function adversity:game_end
 
 # auto reset 
-execute if score #gameState var = #END var if score #resetCountdown var > #10SECONDS var run scoreboard players operation #resetCountdown var -= #1 var
-execute if score #gameState var = #END var if score #resetCountdown var = #10SECONDS var run function adversity:game_reset_auto
-execute if score #gameState var = #END var if score #resetCountdown var < #10SECONDS var run function adversity:game_reset_auto_tick
-execute if score #gameState var = #END var if score #resetCountdown var < #0 var run function adversity:game_reset
+#execute if score #gameState var = #END var if score #resetCountdown var > #10SECONDS var run scoreboard players operation #resetCountdown var -= #1 var
+#execute if score #gameState var = #END var if score #resetCountdown var = #10SECONDS var run function adversity:game_reset_auto
+#execute if score #gameState var = #END var if score #resetCountdown var < #10SECONDS var run function adversity:game_reset_auto_tick
+#execute if score #gameState var = #END var if score #resetCountdown var < #0 var run function adversity:game_reset
 
 # pad triggers
 execute as @a[tag=padTriggered] at @s at @e[tag=pad,limit=1,sort=nearest] positioned ~ ~2 ~ if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=false] run tag @s[distance=0.5..] remove padTriggered

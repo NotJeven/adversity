@@ -7,6 +7,9 @@
 
 kill @e[type=arrow]
 kill @e[type=item]
+kill @e[type=minecraft:experience_orb]
+experience set @a 0 levels
+experience set @a 0
 # var set also sets gamestate to idle
 function adversity:var_set
 execute if score #menuHidden var = #FALSE var run tag @a add menuRequest
