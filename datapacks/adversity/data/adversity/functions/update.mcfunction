@@ -115,7 +115,7 @@ execute if score @e[tag=pad12,limit=1] var = #MINORSUMMON var at @e[tag=pad12,li
 execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] positioned ~-2 ~2 ~-3 run enchant @a[dx=4,dy=1,dz=6] minecraft:flame 1
 execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] positioned ~-2 ~2 ~-3 run enchant @a[dx=4,dy=1,dz=6] minecraft:fire_aspect 1
 execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] positioned ~-2 ~2 ~-3 run enchant @a[dx=4,dy=1,dz=6] minecraft:fire_protection 3
-execute if score @e[tag=pad14,limit=1] var = #MAJORSUMMON var at @e[tag=pad14,limit=1] positioned ~-2 ~2 ~-3 run give @a[dx=4,dy=1,dz=6] minecraft:iron_block 2
+execute if score @e[tag=pad14,limit=1] var = #MAJORSUMMON var at @e[tag=pad14,limit=1] positioned ~-2 ~2 ~-3 run give @a[dx=4,dy=1,dz=6] minecraft:iron_block 1
 execute if score @e[tag=pad14,limit=1] var = #MAJORSUMMON var at @e[tag=pad14,limit=1] positioned ~-2 ~2 ~-3 run give @a[dx=4,dy=1,dz=6] minecraft:flint 1
 
 
@@ -130,7 +130,7 @@ execute if score #padCount var > #0 var run scoreboard players set #padCount var
 execute as @e[tag=pad] run scoreboard players add #padCount var 1
 execute unless score #padCount var = #PADS var run function adversity:pad_objects
 
-# make sure the blazes freeze
+# make sure the objective doesnt move
 execute if score #gameState var = #RUNNING var run data merge entity @e[tag=leftObjective,limit=1] {Motion:[0.0,0.0,0.0]}
 execute if score #gameState var = #RUNNING var run data merge entity @e[tag=rightObjective,limit=1] {Motion:[0.0,0.0,0.0]}
 

@@ -32,7 +32,7 @@ summon area_effect_cloud 594 41 0 {Duration:2147483647,Tags:["pad","pad13","majo
 summon area_effect_cloud 592 19 0 {Duration:2147483647,Tags:["pad","pad14","majorPad"]}
 
 # objectives
-summon area_effect_cloud 521 27 -26 {Duration:2147483647,Tags:["pad","pad15","objectivePad"]}
-summon area_effect_cloud 521 27 26 {Duration:2147483647,Tags:["pad","pad16","objectivePad"]}
+summon area_effect_cloud 516 27 -26 {Duration:2147483647,Tags:["pad","pad15","objectivePad"]}
+summon area_effect_cloud 516 27 26 {Duration:2147483647,Tags:["pad","pad16","objectivePad"]}
 
 scoreboard players set @e[tag=pad] var 0
