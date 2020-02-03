@@ -48,8 +48,8 @@ scoreboard players set #20 var 20
 scoreboard players set #PADS var 16
 scoreboard players set #MINORSUMMON var 120
 scoreboard players set #MINORCOOLDOWN var 240
-scoreboard players set #MAJORSUMMON var 280
-scoreboard players set #MAJORCOOLDOWN var 560
+scoreboard players set #MAJORSUMMON var 420
+scoreboard players set #MAJORCOOLDOWN var 840
 scoreboard players set #OBJECTIVESUMMON var 20
 scoreboard players set #OBJECTIVECOOLDOWN var 25
 # pad lights; depends on the above variables
@@ -60,20 +60,23 @@ scoreboard players set #MINORPADL4 var 161
 scoreboard players set #MINORPADL5 var 201
 scoreboard players set #MINORPADL6 var 240
 
+scoreboard players set #MAJORPADLIGHTS var 7
+scoreboard players set #MINORPADLIGHTS var 3
+
 scoreboard players set #MAJORPADL1 var 2
-scoreboard players set #MAJORPADL2 var 41
-scoreboard players set #MAJORPADL3 var 81
-scoreboard players set #MAJORPADL4 var 121
-scoreboard players set #MAJORPADL5 var 161
-scoreboard players set #MAJORPADL6 var 201
-scoreboard players set #MAJORPADL7 var 241
-scoreboard players set #MAJORPADL8 var 321
-scoreboard players set #MAJORPADL9 var 361
-scoreboard players set #MAJORPADL10 var 401
-scoreboard players set #MAJORPADL11 var 441
-scoreboard players set #MAJORPADL12 var 481
-scoreboard players set #MAJORPADL13 var 521
-scoreboard players set #MAJORPADL14 var 560
+scoreboard players set #MAJORPADL2 var 61
+scoreboard players set #MAJORPADL3 var 121
+scoreboard players set #MAJORPADL4 var 181
+scoreboard players set #MAJORPADL5 var 241
+scoreboard players set #MAJORPADL6 var 301
+scoreboard players set #MAJORPADL7 var 361
+scoreboard players set #MAJORPADL8 var 481
+scoreboard players set #MAJORPADL9 var 541
+scoreboard players set #MAJORPADL10 var 601
+scoreboard players set #MAJORPADL11 var 661
+scoreboard players set #MAJORPADL12 var 721
+scoreboard players set #MAJORPADL13 var 781
+scoreboard players set #MAJORPADL14 var 840
 # END CONSTANTS
 
 # things to be only defined once
