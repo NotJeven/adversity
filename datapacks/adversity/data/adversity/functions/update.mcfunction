@@ -50,13 +50,15 @@ execute if score #gameState var = #RUNNING var unless entity @e[tag=rightObjecti
 #execute if score #gameState var = #END var if score #resetCountdown var < #10SECONDS var run function adversity:game_reset_auto_tick
 #execute if score #gameState var = #END var if score #resetCountdown var < #0 var run function adversity:game_reset
 
-# pad triggers
-execute as @a[tag=padTriggered] at @s at @e[tag=pad,limit=1,sort=nearest] positioned ~ ~2 ~ if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=false] run tag @s[distance=0.5..] remove padTriggered
-execute as @a[team=a,tag=!padTriggered] at @s if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=true] if block ~ ~-1 ~ minecraft:end_portal_frame run tag @s add padTrigger
-execute as @a[team=b,tag=!padTriggered] at @s if block ~ ~ ~ minecraft:jungle_pressure_plate[powered=true] if block ~ ~-1 ~ minecraft:end_portal_frame run tag @s add padTrigger
+# pad trigger rewrite
+execute as @e[tag=pad,tag=!padTriggered] at @s if block ~ ~2 ~ minecraft:jungle_pressure_plate[powered=true] run function adversity:pad_triggered
+execute as @e[tag=pad,tag=padTriggered] at @s unless block ~ ~2 ~ minecraft:jungle_pressure_plate[powered=true] run tag @s remove padTriggered
 
-execute if entity @a[tag=padTrigger] run function adversity:pad_trigger
-execute if score #gameState var = #RUNNING var run function adversity:pad_tick 
+# teleporters
+execute if block 526 28 -26 minecraft:jungle_pressure_plate[powered=true] run tp @a[x=526,y=28,z=-26,distance=..1,team=a] 516 35 -26
+execute if block 526 28 26 minecraft:jungle_pressure_plate[powered=true] run tp @a[x=526,y=28,z=26,distance=..1,team=b] 516 35 26
+execute if block 515 35 -26 minecraft:jungle_pressure_plate[powered=true] run tp @a[x=515,y=35,z=-26,distance=..1,team=a] 525 28 -26
+execute if block 515 35 26 minecraft:jungle_pressure_plate[powered=true] run tp @a[x=515,y=35,z=26,distance=..1,team=b] 525 28 26
 
 # pad lights
 execute as @e[tag=minorPad,tag=leftLane] if score @s var = #MINORPADL1 var at @s run fill ~1 ~1 ~2 ~1 ~1 ~2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
@@ -91,7 +93,7 @@ execute as @e[tag=majorPad] if score @s var = #MAJORPADL14 var at @s run fill ~-
 # pad ticks
 execute if score #gameState var = #RUNNING var run scoreboard players add @e[tag=minorPad,scores={var=1..}] var 1
 execute if score #gameState var = #RUNNING var run scoreboard players add @e[tag=majorPad,scores={var=1..}] var 1
-execute if score #gameState var = #RUNNING var run scoreboard players add @e[tag=objectivePad,scores={var=1..24}] var 1
+execute if score #gameState var = #RUNNING var run scoreboard players add @e[tag=objectivePad,scores={var=1..69}] var 1
 execute as @e[tag=minorPad] if score @s var > #MINORCOOLDOWN var run scoreboard players set @s var 0
 execute as @e[tag=majorPad] if score @s var > #MAJORCOOLDOWN var run scoreboard players set @s var 0
 
