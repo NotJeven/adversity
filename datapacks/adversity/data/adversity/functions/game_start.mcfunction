@@ -19,7 +19,7 @@ spawnpoint @a[team=a] 504 37 -26
 spawnpoint @a[team=b] 504 37 26
 execute as @a[team=a] at @s run tp @a[team=a] ~ ~ ~ -90 0
 execute as @a[team=b] at @s run tp @a[team=b] ~ ~ ~ -90 0
-kill @e[type=blaze]
+kill @e[type=skeleton]
 scoreboard objectives setdisplay sidebar
 execute at @e[tag=pad15] run summon skeleton ~ ~ ~ {Attributes:[{Base:300.0d,Name:"generic.maxHealth"},{Base:1.0d,Name:"generic.knockbackResistance"}],Health:300.0f,PersistenceRequired:true,Tags:["leftObjective"],Invulnerable:1b,Silent:1b,Glowing:0b,NoGravity:1b,CanPickUpLoot:1b,HandItems:[{Count:1b,id:"minecraft:bow",tag:{Enchantments:[{id:"minecraft:punch",lvl:2},{id:"minecraft:flame",lvl:2},{id:"minecraft:power",lvl:2}]}}]}
 execute at @e[tag=pad16] run summon skeleton ~ ~ ~ {Attributes:[{Base:300.0d,Name:"generic.maxHealth"},{Base:1.0d,Name:"generic.knockbackResistance"}],Health:300.0f,PersistenceRequired:true,Tags:["rightObjective"],Invulnerable:1b,Silent:1b,Glowing:0b,NoGravity:1b,CanPickUpLoot:1b,HandItems:[{Count:1b,id:"minecraft:bow",tag:{Enchantments:[{id:"minecraft:punch",lvl:2},{id:"minecraft:flame",lvl:2},{id:"minecraft:power",lvl:2}]}}]}

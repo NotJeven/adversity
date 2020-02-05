@@ -50,8 +50,8 @@ scoreboard players set #MINORSUMMON var 120
 scoreboard players set #MINORCOOLDOWN var 240
 scoreboard players set #MAJORSUMMON var 420
 scoreboard players set #MAJORCOOLDOWN var 840
-scoreboard players set #OBJECTIVESUMMON var 20
-scoreboard players set #OBJECTIVECOOLDOWN var 25
+scoreboard players set #OBJECTIVESUMMON var 60
+scoreboard players set #OBJECTIVECOOLDOWN var 70
 # pad lights; depends on the above variables
 scoreboard players set #MINORPADL1 var 2
 scoreboard players set #MINORPADL2 var 41
