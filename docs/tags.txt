@@ -1,6 +1,10 @@
 initialized
 	marks players that have be initialized into the game
 
+
+resetPlayer
+	marks players who logged out before a reset could occure
+
 dead
 	marks players that have died
 

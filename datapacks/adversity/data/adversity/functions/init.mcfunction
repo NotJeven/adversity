@@ -12,6 +12,11 @@ scoreboard objectives add deathCount deathCount "Deaths"
 
 scoreboard objectives add triggerTeamJoin trigger
 scoreboard objectives add triggerTeamReady trigger
+
+scoreboard objectives add leftPlayer minecraft.custom:minecraft.leave_game
+
+scoreboard objectives add reset dummy
+
 scoreboard objectives add sidebarDisplay dummy "Adversity"
 scoreboard objectives setdisplay sidebar sidebarDisplay
 
@@ -23,7 +28,7 @@ scoreboard players set #RUNNING var 2
 scoreboard players set #END var 3
 
 # ready states
-scoreboard players set #READY var 1	
+scoreboard players set #READY var 1
 scoreboard players set #NOTREADY var 0
 # ready transition states
 scoreboard players set #TURNREADY var 11
@@ -38,6 +43,7 @@ scoreboard players set #1SECOND var 20
 scoreboard players set #10SECONDS var 200
 scoreboard players set #5SECONDS var 100
 scoreboard players set #COUNTDOWNTIME var 120
+scoreboard players set #RESETTIME var 400
 
 # numbers
 scoreboard players set #1 var 1
@@ -77,6 +83,10 @@ scoreboard players set #MAJORPADL11 var 661
 scoreboard players set #MAJORPADL12 var 721
 scoreboard players set #MAJORPADL13 var 781
 scoreboard players set #MAJORPADL14 var 840
+
+scoreboard players set #MINORLIGHTS var 40
+scoreboard players set #MAJORLIGHTS var 60
+
 # END CONSTANTS
 
 # things to be only defined once

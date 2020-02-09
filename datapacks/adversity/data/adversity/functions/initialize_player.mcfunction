@@ -1,5 +1,6 @@
 #	Description
 #		Initializes a player when they do not have a data file (scoreboard, etc)
+# 		Assumes that adveristy:init (adversity:var_set) has been run 
 #	Activator:
 #		@a[tag=!initialized]
 #	Parents:
@@ -7,8 +8,13 @@
 
 # actual function things
 gamemode spectator @a[tag=!initialized]
+clear @a[tag=!initialized]
 effect give @a[tag=!initialized] minecraft:night_vision 99999 0 true
 effect give @a[tag=!initialized] minecraft:saturation 99999 0 true
+
+scoreboard players operation @a[tag=!initialized] leftPlayer = #FALSE var
+
+scoreboard players operation @a[tag=!initialized] var = #matchID var
 
 # move player
 teleport @a[tag=!initialized] 500 50 0 -90 10

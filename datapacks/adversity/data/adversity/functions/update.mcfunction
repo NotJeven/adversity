@@ -6,6 +6,10 @@
 #		minecraft:tick
 
 
+# deal with leaving players, first out of date ones
+execute as @a[tag=initialized,scores={leftPlayer=1..}] unless score @s var = #matchID var run tag @s remove initialized
+execute if entity @a[tag=initialized,scores={leftPlayer=1..}] run function adversity:left_player
+
 # deal with new players when they log in for the first time
 execute if entity @a[tag=!initialized] run function adversity:initialize_player
 
@@ -18,7 +22,7 @@ execute if entity @a[scores={sinceDeath=1..},tag=dead] run function adversity:al
 
 tag @a[x=500,y=50,z=0,distance=0..1,tag=!menuRequest,tag=!menuTimeout] add menuRequest
 execute if entity @a[tag=menuRequest,tag=!menuTimeout] if score #menuHidden var = #FALSE var run function adversity:menu
-execute if entity @a[x=500,y=50,z=0,distance=0..1,tag=menuRequest,tag=menuAdmin,tag=!menuTimeout] if score #menuHidden var = #TRUE var run function adversity:menu_admin
+execute if entity @a[tag=menuRequest,tag=menuAdmin,tag=!menuTimeout] if score #menuHidden var = #TRUE var run function adversity:menu_admin
 tag @a[x=500,y=50,z=0,distance=0..1] add menuTimeout
 tag @a[x=500,y=50,z=0,distance=1..,tag=menuTimeout] remove menuTimeout
 
@@ -45,8 +49,8 @@ execute if score #gameState var = #RUNNING var unless entity @e[tag=leftObjectiv
 execute if score #gameState var = #RUNNING var unless entity @e[tag=rightObjective] run function adversity:game_end
 
 # auto reset 
-#execute if score #gameState var = #END var if score #resetCountdown var > #10SECONDS var run scoreboard players operation #resetCountdown var -= #1 var
-#execute if score #gameState var = #END var if score #resetCountdown var = #10SECONDS var run function adversity:game_reset_auto
+#execute if score #gameState var = #END var if score #resetCountdown var > #FALSE var run scoreboard players operation #resetCountdown var += #1 var
+#execute if score #gameState var = #END var if score #resetCountdown var = #RESETTIME var run function adversity:game_reset_auto
 #execute if score #gameState var = #END var if score #resetCountdown var < #10SECONDS var run function adversity:game_reset_auto_tick
 #execute if score #gameState var = #END var if score #resetCountdown var < #0 var run function adversity:game_reset
 
