@@ -5,8 +5,8 @@
 #	Parents:
 #		adversity:update
 
-tellraw @a[scores={leftPlayer=1..},tag=initialized] [{"text":"Identify as a server "},{"text":"admin","color":"gold","underlined":"true","clickEvent":{"action":"run_command","value":"/execute if entity @s[tag=!menuAdmin] run tag @s add menuAdmin"},"hoverEvent":{"action":"show_text","value":"Identify yourself as a server admin for advanced options."}},{"text":"."}]
-tag @a[scores={leftPlayer=1..},tag=initialized] add menuRequest
+tellraw @a[scores={leftPlayer=1..},tag=initialized,tag=!menuAdmin] [{"text":"Identify as a server "},{"text":"admin","color":"gold","underlined":"true","clickEvent":{"action":"run_command","value":"/execute if entity @s[tag=!menuAdmin] run tag @s add menuAdmin"},"hoverEvent":{"action":"show_text","value":"Identify yourself as a server admin for advanced options."}},{"text":"."}]
+tag @a[scores={leftPlayer=1..},tag=initialized,team=] add menuRequest
 
 execute if score #gameState var = #IDLE var run gamemode spectator @a[scores={leftPlayer=1..},tag=initialized]
 execute if score #gameState var = #END var run gamemode spectator @a[scores={leftPlayer=1..},tag=initialized]

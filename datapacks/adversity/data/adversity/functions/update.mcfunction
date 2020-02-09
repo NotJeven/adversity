@@ -49,7 +49,7 @@ execute if score #gameState var = #RUNNING var unless entity @e[tag=leftObjectiv
 execute if score #gameState var = #RUNNING var unless entity @e[tag=rightObjective] run function adversity:game_end
 
 # auto reset 
-#execute if score #gameState var = #END var if score #resetCountdown var > #FALSE var run scoreboard players operation #resetCountdown var += #1 var
+#execute if score #gameState var = #END var if score #autoReset var = #TRUE var if score #resetCountdown var > #FALSE var run scoreboard players operation #resetCountdown var += #1 var
 #execute if score #gameState var = #END var if score #resetCountdown var = #RESETTIME var run function adversity:game_reset_auto
 #execute if score #gameState var = #END var if score #resetCountdown var < #10SECONDS var run function adversity:game_reset_auto_tick
 #execute if score #gameState var = #END var if score #resetCountdown var < #0 var run function adversity:game_reset
@@ -107,8 +107,8 @@ execute if score @e[tag=pad2,limit=1] var = #MINORSUMMON var at @e[tag=pad2,limi
 execute if score @e[tag=pad3,limit=1] var = #MINORSUMMON var at @e[tag=pad3,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:arrow 16
 execute if score @e[tag=pad4,limit=1] var = #MINORSUMMON var at @e[tag=pad4,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:tnt 5
 
-execute if score @e[tag=pad5,limit=1] var = #MINORSUMMON var at @e[tag=pad5,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=b,dx=2,dy=1,dz=2] run effect give @a[team=b] minecraft:strength 12 1 false
-execute if score @e[tag=pad6,limit=1] var = #MINORSUMMON var at @e[tag=pad6,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=b,dx=2,dy=1,dz=2] run effect give @a[team=b] minecraft:regeneration 12 2 false
+execute if score @e[tag=pad5,limit=1] var = #MINORSUMMON var at @e[tag=pad5,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=b,dx=2,dy=1,dz=2] run effect give @a[team=b] minecraft:strength 12 0 false
+execute if score @e[tag=pad6,limit=1] var = #MINORSUMMON var at @e[tag=pad6,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=b,dx=2,dy=1,dz=2] run effect give @a[team=b] minecraft:regeneration 12 1 false
 
 execute if score @e[tag=pad7,limit=1] var = #MINORSUMMON var at @e[tag=pad7,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:jungle_log 5
 execute if score @e[tag=pad8,limit=1] var = #MINORSUMMON var at @e[tag=pad8,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:gold_block 3
