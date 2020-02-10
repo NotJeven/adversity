@@ -36,6 +36,10 @@ scoreboard players set #TURNNOTREADY var 10
 scoreboard players set #TRUE var 1
 scoreboard players set #FALSE var 0
 
+# toggles
+scoreboard players set #TURNTRUE var 11
+scoreboard players set #TURNFALSE var 10
+
 # time
 scoreboard players set #1SECOND var 20
 scoreboard players set #10SECONDS var 200

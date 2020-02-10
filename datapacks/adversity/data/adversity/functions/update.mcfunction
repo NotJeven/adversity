@@ -148,7 +148,7 @@ execute as @a[team=!,tag=inBounds,tag=toggleBounds] if entity @s run function ad
 # outside bounds but not confirmed
 execute as @a[team=!,tag=!inBounds,tag=!toggleBounds] if entity @s run function adversity:out_bounds
 # still outside
-execute as @a[team=!,tag=!inBounds,tag=toggleBounds] if entity @s run title @s actionbar [{"text":"←","color":"red"},{"text":" outside building area ","color":"white"},{"text":"→","color":"red"}]
+execute as @a[team=!,tag=!inBounds,tag=toggleBounds] if entity @s run title @s actionbar [{"text":"←","color":"dark_red"},{"text":" outside building area ","color":"white"},{"text":"→","color":"dark_red"}]
 
 # objective boss bars
 execute if score #gameState var = #RUNNING var store result bossbar adversity:left value run data get entity @e[tag=leftObjective,limit=1] Health

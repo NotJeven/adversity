@@ -1,15 +1,6 @@
 initialized
 	marks players that have be initialized into the game
 
-selectable
-	marks a player as selectable by the captain system
-
-captainA
-	marks a player as captain of team A
-
-captainB
-	marks a player as captain of team B
-
 resetPlayer
 	marks players who logged out before a reset could occure
 
