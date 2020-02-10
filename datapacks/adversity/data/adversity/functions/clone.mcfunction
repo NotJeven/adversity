@@ -84,5 +84,3 @@ clone 0 0 4 100 62 4 500 0 4
 clone 0 0 3 100 62 3 500 0 3 
 clone 0 0 2 100 62 2 500 0 2 
 clone 0 0 1 100 62 1 500 0 1 
-
-playsound minecraft:entity.cat.ambient master @a ~ ~ ~ 99 0 1
