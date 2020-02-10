@@ -15,8 +15,6 @@ scoreboard objectives add triggerTeamReady trigger
 
 scoreboard objectives add leftPlayer minecraft.custom:minecraft.leave_game
 
-scoreboard objectives add reset dummy
-
 scoreboard objectives add sidebarDisplay dummy "Adversity"
 scoreboard objectives setdisplay sidebar sidebarDisplay
 
