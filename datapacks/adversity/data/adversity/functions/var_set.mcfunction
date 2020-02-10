@@ -16,6 +16,7 @@ scoreboard players operation #gameCountdown var = #COUNTDOWNTIME var
 scoreboard players operation #resetCountdown var = #RESETTIME var
 
 scoreboard players reset * sidebarDisplay
+scoreboard players reset * selectionID
 team leave *
 
 scoreboard players set @e[tag=pad] var 0
