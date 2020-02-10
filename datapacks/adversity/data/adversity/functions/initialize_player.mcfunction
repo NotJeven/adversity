@@ -22,7 +22,7 @@ spawnpoint @a[tag=!initialized] 500 50 0
 
 # colourful things
 tellraw @a[tag=!initialized] [{"text":"Map: ","color":"white"},{"text":"Adversity","color":"gold"}]
-tellraw @a[tag=!initialized] [{"text":"Author: ","color":"white"},{"text":"Jeven, MrScaryMuffin, T3hMuffinz, ","color":"gold"},{"text":"→","underlined":"true","color":"gold","hoverEvent":{"action":"show_text","value":"View credits."},"clickEvent":{"action":"run_command","value":"function adversity:credits"}}]
+tellraw @a[tag=!initialized] [{"text":"Author: ","color":"white"},{"text":"Jeven, MrScaryMuffin, T3hMuffinz, ","color":"gold"}]
 tellraw @a[tag=!initialized] [{"text":"Version: ","color":"white"},{"text":"v2.0 Perview (consult tag/commit)","color":"gold"}]
 tellraw @a[tag=!initialized] ""
 tellraw @a[tag=!initialized] [{"text":"Identify as a server "},{"text":"admin","color":"gold","underlined":"true","clickEvent":{"action":"run_command","value":"/execute if entity @s[tag=!menuAdmin] run tag @s add menuAdmin"},"hoverEvent":{"action":"show_text","value":"Identify yourself as a server admin for advanced options."}},{"text":"."}]
