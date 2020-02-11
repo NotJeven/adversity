@@ -7,6 +7,7 @@
 
 
 team join a @a[scores={triggerTeamJoin=1}]
+clear @a[scores={triggerTeamJoin=1}]
 
 # flavour
 tellraw @a[scores={triggerTeamJoin=1}] [{"text":"You rallied with the ","color":"white"},{"text":"Blue","color":"blue"},{"text":" banners.","color":"white"}]
