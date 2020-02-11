@@ -5,7 +5,7 @@
 #	Parents:
 #		adversity:update
 
-tellraw @s [{"text":"The map is ","color":"white"},{"text":"resetting","color":"light_purple"},{"text":".","color":"white"}]
+tellraw @s [{"text":"Please wait while the map resets...","color":"gray"}]
 
 function adversity:clone
 # var set also sets gamestate to idle and generates new matchID

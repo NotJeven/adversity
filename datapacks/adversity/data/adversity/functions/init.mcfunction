@@ -94,7 +94,7 @@ scoreboard players set #MAJORLIGHTS var 60
 # things to be only defined once
 scoreboard players operation #gameCountdownSecond var = #1 var
 scoreboard players operation #menuHidden var = #FALSE var
-
+scoreboard players operation #autoReset var = #TRUE var
 
 # teams
 team add a "Left"

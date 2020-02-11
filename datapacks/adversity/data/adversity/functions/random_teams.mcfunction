@@ -5,14 +5,15 @@
 #	Parents:
 #		
 
-tellraw @s [{"text":"Selecting ","color":"white"},{"text":"random teams","color":"dark_aqua"},{"text":".","color":"white"}]
+tellraw @s [{"text":"Selecting random teams...","color":"gray"}]
 
 function adversity:random_teams_r
-
+scoreboard players set @a[team=a] sidebarDisplay 4
+scoreboard players set @a[team=b] sidebarDisplay 2
 tellraw @a ""
 tellraw @a [{"text":"Random Teams","color":"dark_aqua"},{"text":" have been selected.","color":"white"}]
 title @a subtitle [{"text":"Random Teams","color":"dark_aqua"},{"text":" have been selected.","color":"white"}]
 title @a title ""
-playsound sound master @a ~ ~ ~ 1 1 1
+playsound block.brewing_stand.brew master @a ~ ~ ~ 1 0.7 1
 
 tag @a add menuRequest
