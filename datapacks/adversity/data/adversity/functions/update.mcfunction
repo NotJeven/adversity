@@ -120,6 +120,28 @@ execute if score @e[tag=pad10,limit=1] var = #MINORSUMMON var at @e[tag=pad10,li
 execute if score @e[tag=pad11,limit=1] var = #MINORSUMMON var at @e[tag=pad11,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=a,dx=2,dy=1,dz=2] run effect give @a[team=a] minecraft:strength 12 0 false
 execute if score @e[tag=pad12,limit=1] var = #MINORSUMMON var at @e[tag=pad12,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=a,dx=2,dy=1,dz=2] run effect give @a[team=a] minecraft:regeneration 12 1 false
 
+
+execute if score @e[tag=pad1,limit=1] var = #MINORSUMMON var at @e[tag=pad1,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=a,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad2,limit=1] var = #MINORSUMMON var at @e[tag=pad2,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=a,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad3,limit=1] var = #MINORSUMMON var at @e[tag=pad3,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=a,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad4,limit=1] var = #MINORSUMMON var at @e[tag=pad4,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=a,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad4,limit=1] var = #MINORSUMMON var at @e[tag=pad4,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=a,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
+
+execute if score @e[tag=pad5,limit=1] var = #MINORSUMMON var at @e[tag=pad5,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=b,dx=2,dy=1,dz=2] run playsound minecraft:entity.generic.drink master @a[team=b] ~ ~ ~ 1 1 1
+execute if score @e[tag=pad6,limit=1] var = #MINORSUMMON var at @e[tag=pad6,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=b,dx=2,dy=1,dz=2] run playsound minecraft:entity.generic.drink master @a[team=b] ~ ~ ~ 1 1 1
+
+execute if score @e[tag=pad7,limit=1] var = #MINORSUMMON var at @e[tag=pad7,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=b,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad8,limit=1] var = #MINORSUMMON var at @e[tag=pad8,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=b,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad9,limit=1] var = #MINORSUMMON var at @e[tag=pad9,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=b,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad10,limit=1] var = #MINORSUMMON var at @e[tag=pad10,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=b,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad10,limit=1] var = #MINORSUMMON var at @e[tag=pad10,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=b,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
+
+execute if score @e[tag=pad11,limit=1] var = #MINORSUMMON var at @e[tag=pad11,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=a,dx=2,dy=1,dz=2] run playsound minecraft:entity.generic.drink master @a[team=a] ~ ~ ~ 1 1 1
+execute if score @e[tag=pad12,limit=1] var = #MINORSUMMON var at @e[tag=pad12,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=a,dx=2,dy=1,dz=2] run playsound minecraft:entity.generic.drink master @a[team=a] ~ ~ ~ 1 1 1
+
+execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] run playsound minecraft:entity.player.levelup master @a[distance=..15] ~ ~ ~ 1 0 1
+execute if score @e[tag=pad14,limit=1] var = #MAJORSUMMON var at @e[tag=pad14,limit=1] run playsound minecraft:entity.player.levelup master @a[distance=..15] ~ ~ ~ 1 0 1
+
 execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] positioned ~-2 ~2 ~-3 run enchant @a[dx=4,dy=1,dz=6] minecraft:flame 1
 execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] positioned ~-2 ~2 ~-3 run enchant @a[dx=4,dy=1,dz=6] minecraft:fire_aspect 1
 execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] positioned ~-2 ~2 ~-3 run enchant @a[dx=4,dy=1,dz=6] minecraft:fire_protection 3
