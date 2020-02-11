@@ -26,8 +26,6 @@ execute at @e[tag=pad16] run summon skeleton ~ ~ ~ {Attributes:[{Base:300.0d,Nam
 team join a @e[tag=leftObjective]
 team join b @e[tag=rightObjective]
 
-clear @a
-
 # bossbars visible
 bossbar set adversity:left players @a
 bossbar set adversity:right players @a
