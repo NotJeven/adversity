@@ -58,12 +58,6 @@ execute if score #gameState var = #RUNNING var unless entity @e[tag=rightObjecti
 execute as @e[tag=pad,tag=!padTriggered] at @s if block ~ ~2 ~ minecraft:jungle_pressure_plate[powered=true] run function adversity:pad_triggered
 execute as @e[tag=pad,tag=padTriggered] at @s unless block ~ ~2 ~ minecraft:jungle_pressure_plate[powered=true] run tag @s remove padTriggered
 
-# teleporters
-execute if block 526 28 -26 minecraft:jungle_pressure_plate[powered=true] run tp @a[x=526,y=28,z=-26,distance=..1,team=a] 516 35 -26
-execute if block 526 28 26 minecraft:jungle_pressure_plate[powered=true] run tp @a[x=526,y=28,z=26,distance=..1,team=b] 516 35 26
-execute if block 515 35 -26 minecraft:jungle_pressure_plate[powered=true] run tp @a[x=515,y=35,z=-26,distance=..1,team=a] 525 28 -26
-execute if block 515 35 26 minecraft:jungle_pressure_plate[powered=true] run tp @a[x=515,y=35,z=26,distance=..1,team=b] 525 28 26
-
 # pad lights
 execute as @e[tag=minorPad,tag=leftLane] if score @s var = #MINORPADL1 var at @s run fill ~1 ~1 ~2 ~1 ~1 ~2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
 execute as @e[tag=minorPad,tag=leftLane] if score @s var = #MINORPADL2 var at @s run fill ~0 ~1 ~2 ~0 ~1 ~2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
