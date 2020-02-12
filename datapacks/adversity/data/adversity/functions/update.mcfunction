@@ -98,7 +98,7 @@ execute as @e[tag=majorPad] if score @s var > #MAJORCOOLDOWN var run scoreboard 
 # pad summon
 execute if score @e[tag=pad1,limit=1] var = #MINORSUMMON var at @e[tag=pad1,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:jungle_log 5
 execute if score @e[tag=pad2,limit=1] var = #MINORSUMMON var at @e[tag=pad2,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:gold_block 3
-execute if score @e[tag=pad3,limit=1] var = #MINORSUMMON var at @e[tag=pad3,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:arrow 16
+execute if score @e[tag=pad3,limit=1] var = #MINORSUMMON var at @e[tag=pad3,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:arrow 10
 execute if score @e[tag=pad4,limit=1] var = #MINORSUMMON var at @e[tag=pad4,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:tnt 5
 execute if score @e[tag=pad4,limit=1] var = #MINORSUMMON var at @e[tag=pad4,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:fire_charge 1
 
@@ -108,7 +108,7 @@ execute if score @e[tag=pad6,limit=1] var = #MINORSUMMON var at @e[tag=pad6,limi
 
 execute if score @e[tag=pad7,limit=1] var = #MINORSUMMON var at @e[tag=pad7,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:jungle_log 5
 execute if score @e[tag=pad8,limit=1] var = #MINORSUMMON var at @e[tag=pad8,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:gold_block 3
-execute if score @e[tag=pad9,limit=1] var = #MINORSUMMON var at @e[tag=pad9,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:arrow 16
+execute if score @e[tag=pad9,limit=1] var = #MINORSUMMON var at @e[tag=pad9,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:arrow 10
 execute if score @e[tag=pad10,limit=1] var = #MINORSUMMON var at @e[tag=pad10,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:tnt 5
 execute if score @e[tag=pad10,limit=1] var = #MINORSUMMON var at @e[tag=pad10,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:fire_charge 1
 
