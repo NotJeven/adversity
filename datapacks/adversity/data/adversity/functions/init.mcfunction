@@ -45,12 +45,14 @@ scoreboard players set #1SECOND var 20
 scoreboard players set #10SECONDS var 200
 scoreboard players set #5SECONDS var 100
 scoreboard players set #COUNTDOWNTIME var 120
-scoreboard players set #RESETTIME var 400
+scoreboard players set #RESETTIME var 1300
+scoreboard players set #RESETTIMEBUF var 1200
 
 # numbers
 scoreboard players set #1 var 1
 scoreboard players set #0 var 0
 scoreboard players set #20 var 20
+scoreboard players set #5 var 5
 
 # pad things
 scoreboard players set #PADS var 16
@@ -94,7 +96,7 @@ scoreboard players set #MAJORLIGHTS var 60
 # things to be only defined once
 scoreboard players operation #gameCountdownSecond var = #1 var
 scoreboard players operation #menuHidden var = #FALSE var
-scoreboard players operation #autoReset var = #TRUE var
+scoreboard players operation #autoReset var = #FALSE var
 
 # teams
 team add a "Left"
