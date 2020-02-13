@@ -32,4 +32,5 @@ execute if score #menuHidden var = #TURNFALSE var run scoreboard players operati
 
 # menu
 execute if score #menuHidden var = #FALSE var run tag @a add menuRequest
+execute if score #menuHidden var = #TRUE var run tag @a[tag=menuAdmin] add menuRequest
 

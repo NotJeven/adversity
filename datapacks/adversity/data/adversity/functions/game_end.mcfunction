@@ -10,6 +10,7 @@ execute if entity @e[tag=leftObjective] run title @a subtitle [{"text":"Blue","c
 execute if entity @e[tag=rightObjective] run tellraw @a [{"text":"Yellow","color":"yellow"},{"text":" victory!","color":"white"}]
 execute if entity @e[tag=rightObjective] run title @a subtitle [{"text":"Yellow","color":"yellow"},{"text":" victory!","color":"white"}]
 title @a title ""
+tellraw @a ""
 
 playsound minecraft:entity.wither.spawn master @a ~ ~ ~ 1 0.5 1
 

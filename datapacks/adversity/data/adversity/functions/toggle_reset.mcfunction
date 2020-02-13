@@ -14,7 +14,7 @@ execute if score #autoReset var = #TURNTRUE var run scoreboard players operation
 
 # flavour
 execute if score #autoReset var = #TURNFALSE var run tellraw @a [{"text":"Automatic reset is ","color":"white"},{"text":"disabled","color":"dark_red"},{"text":".","color":"white"}]
-execute if score #autoReset var = #TURNFALSE var run title @a subtitle [{"text":"Automatic reset is ","color":"white"},{"text":"disabled","color":"dark_red"},{"text":" .","color":"white"}]
+execute if score #autoReset var = #TURNFALSE var run title @a subtitle [{"text":"Automatic reset is ","color":"white"},{"text":"disabled","color":"dark_red"},{"text":".","color":"white"}]
 execute if score #autoReset var = #TURNFALSE var run title @a title ""
 execute if score #autoReset var = #TURNFALSE var run playsound minecraft:entity.item.break master @a ~ ~ ~ 1 0.4 1
 

@@ -24,6 +24,7 @@ scoreboard players operation @a var = #matchID var
 execute if score #menuHidden var = #FALSE var run tag @a add menuRequest
 clear @a[team=!spectator]
 
+tellraw @a ""
 tellraw @a [{"text":"The map has been "},{"text":"reset","color":"light_purple"},{"text":".","color":"white"}]
 title @a subtitle [{"text":"The map has been "},{"text":"reset","color":"light_purple"},{"text":".","color":"white"}]
 title @a title ""
