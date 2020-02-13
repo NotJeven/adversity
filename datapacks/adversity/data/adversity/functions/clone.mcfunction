@@ -5,6 +5,9 @@
 #	Parents:
 #		none
 
+forceload add 500 -38 600 38
+forceload add 0 -38 100 38
+
 clone 0 0 -38 100 62 -38 500 0 -38 
 clone 0 0 -37 100 62 -37 500 0 -37 
 clone 0 0 -36 100 62 -36 500 0 -36 
@@ -84,3 +87,6 @@ clone 0 0 4 100 62 4 500 0 4
 clone 0 0 3 100 62 3 500 0 3 
 clone 0 0 2 100 62 2 500 0 2 
 clone 0 0 1 100 62 1 500 0 1 
+
+forceload remove 500 -38 600 38
+forceload remove 0 -38 100 38
