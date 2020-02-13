@@ -19,7 +19,6 @@ execute if entity @a[scores={sinceDeath=1..},tag=dead] run function adversity:al
 
 
 # Menu Requests
-
 tag @a[x=500,y=50,z=0,distance=0..1,tag=!menuRequest,tag=!menuTimeout] add menuRequest
 execute if entity @a[tag=menuRequest,tag=!menuTimeout] if score #menuHidden var = #FALSE var run function adversity:menu
 execute if entity @a[tag=menuRequest,tag=menuAdmin,tag=!menuTimeout] if score #menuHidden var = #TRUE var run function adversity:menu_admin
@@ -35,7 +34,6 @@ execute if entity @a[scores={triggerTeamReady=1},team=a] run function adversity:
 execute if entity @a[scores={triggerTeamReady=1},team=b] run function adversity:team_ready_b
 execute if entity @a[scores={triggerTeamReady=1},team=spectator] run function adversity:team_ready_spectator
 
-
 # start/stop the game
 execute if score #teamReadyA var = #READY var if score #teamReadyB var = #READY var if score #teamReadySpectator var = #READY var if score #gameState var = #IDLE var run function adversity:game_countdown_start
 execute if score #gameState var = #COUNTDOWN var if score #teamReadyB var = #NOTREADY var run function adversity:game_countdown_stop
@@ -50,6 +48,9 @@ execute if score #gameState var = #RUNNING var unless entity @e[tag=rightObjecti
 
 # auto reset 
 execute if score #gameState var = #END var if score #autoReset var = #TRUE var run function adversity:game_reset_auto_tick
+
+# too far away from map
+tp @a[x=550,y=50,z=0,distance=275..,gamemode=spectator] 500 51 0
 
 # pad trigger rewrite
 execute as @e[tag=pad,tag=!padTriggered] at @s if block ~ ~2 ~ minecraft:jungle_pressure_plate[powered=true] run function adversity:pad_triggered
