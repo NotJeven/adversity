@@ -120,5 +120,9 @@ bossbar add adversity:right ""
 bossbar set adversity:right color yellow
 bossbar set adversity:right max 300
 
+# load the map chunks
+forceload add 500 -38 600 38
+forceload add 0 -38 100 38
+
 # initializes/sets all the variables
 function adversity:var_set
