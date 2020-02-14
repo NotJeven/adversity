@@ -148,8 +148,8 @@ execute if score @e[tag=pad16,limit=1] var = #OBJECTIVESUMMON var at @e[tag=pad1
 execute if score @e[tag=pad16,limit=1] var = #OBJECTIVESUMMON var run data merge entity @e[tag=rightObjective,limit=1] {Invulnerable:0b,Silent:0b,Glowing:1b}
 
 # clear objective area
-execute if score @e[tag=pad15,limit=1] var = #OBJECTIVESUMMON var run fill 520 33 -27 522 29 -25 minecraft:air replace #adversity:all_blocks
-execute if score @e[tag=pad16,limit=1] var = #OBJECTIVESUMMON var run fill 520 33 27 522 29 25 minecraft:air replace #adversity:all_blocks
+execute if score @e[tag=pad15,limit=1] var > #OBJECTIVESUMMON var run fill 520 33 -27 522 29 -25 minecraft:air replace #adversity:all_blocks
+execute if score @e[tag=pad16,limit=1] var > #OBJECTIVESUMMON var run fill 520 33 27 522 29 25 minecraft:air replace #adversity:all_blocks
 
 # if the pad objects die for some reason....
 execute if score #padCount var > #0 var run scoreboard players set #padCount var 0
