@@ -114,11 +114,11 @@ team modify notready color red
 # boss bars
 bossbar add adversity:left ""
 bossbar set adversity:left color blue
-bossbar set adversity:left max 300
+bossbar set adversity:left max 255
 
 bossbar add adversity:right ""
 bossbar set adversity:right color yellow
-bossbar set adversity:right max 300
+bossbar set adversity:right max 255
 
 # load the map chunks
 forceload add 500 -38 600 38
