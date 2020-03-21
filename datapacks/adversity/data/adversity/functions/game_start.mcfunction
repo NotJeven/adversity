@@ -31,7 +31,6 @@ bossbar set adversity:right players @a
 bossbar set adversity:left visible true
 bossbar set adversity:right visible true
 
-scoreboard players reset @a[team=a] triggerTeamJoin
-scoreboard players reset @a[team=a] triggerTeamReady
-scoreboard players reset @a[team=b] triggerTeamJoin
-scoreboard players reset @a[team=b] triggerTeamReady
+# menu lockdown
+scoreboard players reset @a triggerTeamJoin
+scoreboard players reset @a triggerTeamReady
