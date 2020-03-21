@@ -9,6 +9,7 @@
 effect give @a[tag=dead,scores={sinceDeath=1..}] minecraft:night_vision 99999 0 true
 effect give @a[tag=dead,scores={sinceDeath=1..}] minecraft:saturation 99999 0 true
 effect give @a[tag=dead,scores={sinceDeath=1..}] minecraft:absorption 8 2 true
+execute if score #forcedRegen var = #TRUE var run effect give @a[tag=dead,scores={sinceDeath=1..}] minecraft:regeneration 99999 0 true
 
 execute unless score #gameState var = #RUNNING var run gamemode spectator @a[tag=dead,scores={sinceDeath=1..},gamemode=!spectator]
 execute if score #gameState var = #RUNNING var run gamemode survival @a[tag=dead,scores={sinceDeath=1..},team=a,gamemode=!survival]
