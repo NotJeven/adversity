@@ -94,52 +94,52 @@ execute as @e[tag=minorPad] if score @s var > #MINORCOOLDOWN var run scoreboard 
 execute as @e[tag=majorPad] if score @s var > #MAJORCOOLDOWN var run scoreboard players set @s var 0
 
 # pad summon
-execute if score @e[tag=pad1,limit=1] var = #MINORSUMMON var at @e[tag=pad1,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:jungle_log 5
-execute if score @e[tag=pad2,limit=1] var = #MINORSUMMON var at @e[tag=pad2,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:gold_block 3
-execute if score @e[tag=pad3,limit=1] var = #MINORSUMMON var at @e[tag=pad3,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:arrow 10
-execute if score @e[tag=pad4,limit=1] var = #MINORSUMMON var at @e[tag=pad4,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:tnt 5
-execute if score @e[tag=pad4,limit=1] var = #MINORSUMMON var at @e[tag=pad4,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=a,dx=2,dy=1,dz=2] minecraft:fire_charge 1
+execute if score @e[tag=pad1,limit=1] var = #MINORSUMMON var at @e[tag=pad1,limit=1] positioned ~-2 ~2 ~-2 run give @a[team=a,dx=3,dy=1,dz=3] minecraft:jungle_log 5
+execute if score @e[tag=pad2,limit=1] var = #MINORSUMMON var at @e[tag=pad2,limit=1] positioned ~-2 ~2 ~-2 run give @a[team=a,dx=3,dy=1,dz=3] minecraft:gold_block 3
+execute if score @e[tag=pad3,limit=1] var = #MINORSUMMON var at @e[tag=pad3,limit=1] positioned ~-2 ~2 ~-2 run give @a[team=a,dx=3,dy=1,dz=3] minecraft:arrow 10
+execute if score @e[tag=pad4,limit=1] var = #MINORSUMMON var at @e[tag=pad4,limit=1] positioned ~-2 ~2 ~-2 run give @a[team=a,dx=3,dy=1,dz=3] minecraft:tnt 5
+execute if score @e[tag=pad4,limit=1] var = #MINORSUMMON var at @e[tag=pad4,limit=1] positioned ~-2 ~2 ~-2 run give @a[team=a,dx=3,dy=1,dz=3] minecraft:fire_charge 1
 
-execute if score @e[tag=pad5,limit=1] var = #MINORSUMMON var at @e[tag=pad5,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=b,dx=2,dy=1,dz=2] run effect give @a[team=b] minecraft:resistance 12 0 false
-execute if score @e[tag=pad5,limit=1] var = #MINORSUMMON var at @e[tag=pad5,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=b,dx=2,dy=1,dz=2] run effect give @a[team=b] minecraft:fire_resistance 12 0 false
-execute if score @e[tag=pad6,limit=1] var = #MINORSUMMON var at @e[tag=pad6,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=b,dx=2,dy=1,dz=2] run effect give @a[team=b] minecraft:strength 12 0 false
+execute if score @e[tag=pad5,limit=1] var = #MINORSUMMON var at @e[tag=pad5,limit=1] positioned ~-2 ~2 ~-2 if entity @a[team=b,dx=3,dy=1,dz=3] run effect give @a[team=b] minecraft:resistance 12 0 false
+execute if score @e[tag=pad5,limit=1] var = #MINORSUMMON var at @e[tag=pad5,limit=1] positioned ~-2 ~2 ~-2 if entity @a[team=b,dx=3,dy=1,dz=3] run effect give @a[team=b] minecraft:fire_resistance 12 0 false
+execute if score @e[tag=pad6,limit=1] var = #MINORSUMMON var at @e[tag=pad6,limit=1] positioned ~-2 ~2 ~-2 if entity @a[team=b,dx=3,dy=1,dz=3] run effect give @a[team=b] minecraft:strength 12 0 false
 
-execute if score @e[tag=pad7,limit=1] var = #MINORSUMMON var at @e[tag=pad7,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:jungle_log 5
-execute if score @e[tag=pad8,limit=1] var = #MINORSUMMON var at @e[tag=pad8,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:gold_block 3
-execute if score @e[tag=pad9,limit=1] var = #MINORSUMMON var at @e[tag=pad9,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:arrow 10
-execute if score @e[tag=pad10,limit=1] var = #MINORSUMMON var at @e[tag=pad10,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:tnt 5
-execute if score @e[tag=pad10,limit=1] var = #MINORSUMMON var at @e[tag=pad10,limit=1] positioned ~-1 ~2 ~-1 run give @a[team=b,dx=2,dy=1,dz=2] minecraft:fire_charge 1
+execute if score @e[tag=pad7,limit=1] var = #MINORSUMMON var at @e[tag=pad7,limit=1] positioned ~-2 ~2 ~-2 run give @a[team=b,dx=3,dy=1,dz=3] minecraft:jungle_log 5
+execute if score @e[tag=pad8,limit=1] var = #MINORSUMMON var at @e[tag=pad8,limit=1] positioned ~-2 ~2 ~-2 run give @a[team=b,dx=3,dy=1,dz=3] minecraft:gold_block 3
+execute if score @e[tag=pad9,limit=1] var = #MINORSUMMON var at @e[tag=pad9,limit=1] positioned ~-2 ~2 ~-2 run give @a[team=b,dx=3,dy=1,dz=3] minecraft:arrow 10
+execute if score @e[tag=pad10,limit=1] var = #MINORSUMMON var at @e[tag=pad10,limit=1] positioned ~-2 ~2 ~-2 run give @a[team=b,dx=3,dy=1,dz=3] minecraft:tnt 5
+execute if score @e[tag=pad10,limit=1] var = #MINORSUMMON var at @e[tag=pad10,limit=1] positioned ~-2 ~2 ~-2 run give @a[team=b,dx=3,dy=1,dz=3] minecraft:fire_charge 1
 
-execute if score @e[tag=pad11,limit=1] var = #MINORSUMMON var at @e[tag=pad11,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=a,dx=2,dy=1,dz=2] run effect give @a[team=a] minecraft:resistance 12 0 false
-execute if score @e[tag=pad11,limit=1] var = #MINORSUMMON var at @e[tag=pad11,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=a,dx=2,dy=1,dz=2] run effect give @a[team=a] minecraft:fire_resistance 12 0 false
-execute if score @e[tag=pad12,limit=1] var = #MINORSUMMON var at @e[tag=pad12,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=a,dx=2,dy=1,dz=2] run effect give @a[team=a] minecraft:strength 12 0 false
+execute if score @e[tag=pad11,limit=1] var = #MINORSUMMON var at @e[tag=pad11,limit=1] positioned ~-2 ~2 ~-2 if entity @a[team=a,dx=3,dy=1,dz=3] run effect give @a[team=a] minecraft:resistance 12 0 false
+execute if score @e[tag=pad11,limit=1] var = #MINORSUMMON var at @e[tag=pad11,limit=1] positioned ~-2 ~2 ~-2 if entity @a[team=a,dx=3,dy=1,dz=3] run effect give @a[team=a] minecraft:fire_resistance 12 0 false
+execute if score @e[tag=pad12,limit=1] var = #MINORSUMMON var at @e[tag=pad12,limit=1] positioned ~-2 ~2 ~-2 if entity @a[team=a,dx=3,dy=1,dz=3] run effect give @a[team=a] minecraft:strength 12 0 false
 
 
-execute if score @e[tag=pad1,limit=1] var = #MINORSUMMON var at @e[tag=pad1,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=a,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
-execute if score @e[tag=pad2,limit=1] var = #MINORSUMMON var at @e[tag=pad2,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=a,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
-execute if score @e[tag=pad3,limit=1] var = #MINORSUMMON var at @e[tag=pad3,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=a,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
-execute if score @e[tag=pad4,limit=1] var = #MINORSUMMON var at @e[tag=pad4,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=a,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
-execute if score @e[tag=pad4,limit=1] var = #MINORSUMMON var at @e[tag=pad4,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=a,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad1,limit=1] var = #MINORSUMMON var at @e[tag=pad1,limit=1] positioned ~-2 ~2 ~-2 run playsound minecraft:entity.player.levelup master @a[team=a,dx=3,dy=1,dz=3] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad2,limit=1] var = #MINORSUMMON var at @e[tag=pad2,limit=1] positioned ~-2 ~2 ~-2 run playsound minecraft:entity.player.levelup master @a[team=a,dx=3,dy=1,dz=3] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad3,limit=1] var = #MINORSUMMON var at @e[tag=pad3,limit=1] positioned ~-2 ~2 ~-2 run playsound minecraft:entity.player.levelup master @a[team=a,dx=3,dy=1,dz=3] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad4,limit=1] var = #MINORSUMMON var at @e[tag=pad4,limit=1] positioned ~-2 ~2 ~-2 run playsound minecraft:entity.player.levelup master @a[team=a,dx=3,dy=1,dz=3] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad4,limit=1] var = #MINORSUMMON var at @e[tag=pad4,limit=1] positioned ~-2 ~2 ~-2 run playsound minecraft:entity.player.levelup master @a[team=a,dx=3,dy=1,dz=3] ~ ~ ~ 1 2 1
 
-execute if score @e[tag=pad5,limit=1] var = #MINORSUMMON var at @e[tag=pad5,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=b,dx=2,dy=1,dz=2] run playsound minecraft:entity.generic.drink master @a[team=b] ~ ~ ~ 1 1 1
-execute if score @e[tag=pad6,limit=1] var = #MINORSUMMON var at @e[tag=pad6,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=b,dx=2,dy=1,dz=2] run playsound minecraft:entity.generic.drink master @a[team=b] ~ ~ ~ 1 1 1
+execute if score @e[tag=pad5,limit=1] var = #MINORSUMMON var at @e[tag=pad5,limit=1] positioned ~-2 ~2 ~-2 if entity @a[team=b,dx=3,dy=1,dz=3] run playsound minecraft:entity.generic.drink master @a[team=b] ~ ~ ~ 1 1 1
+execute if score @e[tag=pad6,limit=1] var = #MINORSUMMON var at @e[tag=pad6,limit=1] positioned ~-2 ~2 ~-2 if entity @a[team=b,dx=3,dy=1,dz=3] run playsound minecraft:entity.generic.drink master @a[team=b] ~ ~ ~ 1 1 1
 
-execute if score @e[tag=pad7,limit=1] var = #MINORSUMMON var at @e[tag=pad7,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=b,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
-execute if score @e[tag=pad8,limit=1] var = #MINORSUMMON var at @e[tag=pad8,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=b,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
-execute if score @e[tag=pad9,limit=1] var = #MINORSUMMON var at @e[tag=pad9,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=b,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
-execute if score @e[tag=pad10,limit=1] var = #MINORSUMMON var at @e[tag=pad10,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=b,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
-execute if score @e[tag=pad10,limit=1] var = #MINORSUMMON var at @e[tag=pad10,limit=1] positioned ~-1 ~2 ~-1 run playsound minecraft:entity.player.levelup master @a[team=b,dx=2,dy=1,dz=2] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad7,limit=1] var = #MINORSUMMON var at @e[tag=pad7,limit=1] positioned ~-2 ~2 ~-2 run playsound minecraft:entity.player.levelup master @a[team=b,dx=3,dy=1,dz=3] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad8,limit=1] var = #MINORSUMMON var at @e[tag=pad8,limit=1] positioned ~-2 ~2 ~-2 run playsound minecraft:entity.player.levelup master @a[team=b,dx=3,dy=1,dz=3] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad9,limit=1] var = #MINORSUMMON var at @e[tag=pad9,limit=1] positioned ~-2 ~2 ~-2 run playsound minecraft:entity.player.levelup master @a[team=b,dx=3,dy=1,dz=3] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad10,limit=1] var = #MINORSUMMON var at @e[tag=pad10,limit=1] positioned ~-2 ~2 ~-2 run playsound minecraft:entity.player.levelup master @a[team=b,dx=3,dy=1,dz=3] ~ ~ ~ 1 2 1
+execute if score @e[tag=pad10,limit=1] var = #MINORSUMMON var at @e[tag=pad10,limit=1] positioned ~-2 ~2 ~-2 run playsound minecraft:entity.player.levelup master @a[team=b,dx=3,dy=1,dz=3] ~ ~ ~ 1 2 1
 
-execute if score @e[tag=pad11,limit=1] var = #MINORSUMMON var at @e[tag=pad11,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=a,dx=2,dy=1,dz=2] run playsound minecraft:entity.generic.drink master @a[team=a] ~ ~ ~ 1 1 1
-execute if score @e[tag=pad12,limit=1] var = #MINORSUMMON var at @e[tag=pad12,limit=1] positioned ~-1 ~2 ~-1 if entity @a[team=a,dx=2,dy=1,dz=2] run playsound minecraft:entity.generic.drink master @a[team=a] ~ ~ ~ 1 1 1
+execute if score @e[tag=pad11,limit=1] var = #MINORSUMMON var at @e[tag=pad11,limit=1] positioned ~-2 ~2 ~-2 if entity @a[team=a,dx=2,dy=1,dz=2] run playsound minecraft:entity.generic.drink master @a[team=a] ~ ~ ~ 1 1 1
+execute if score @e[tag=pad12,limit=1] var = #MINORSUMMON var at @e[tag=pad12,limit=1] positioned ~-2 ~2 ~-2 if entity @a[team=a,dx=2,dy=1,dz=2] run playsound minecraft:entity.generic.drink master @a[team=a] ~ ~ ~ 1 1 1
 
 execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] run playsound minecraft:entity.player.levelup master @a[distance=..15] ~ ~ ~ 1 0 1
 execute if score @e[tag=pad14,limit=1] var = #MAJORSUMMON var at @e[tag=pad14,limit=1] run playsound minecraft:entity.player.levelup master @a[distance=..15] ~ ~ ~ 1 0 1
 
-execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] positioned ~-2 ~2 ~-3 run enchant @a[dx=4,dy=1,dz=6] minecraft:flame 1
-execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] positioned ~-2 ~2 ~-3 run enchant @a[dx=4,dy=1,dz=6] minecraft:fire_aspect 1
-execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] positioned ~-2 ~2 ~-3 run enchant @a[dx=4,dy=1,dz=6] minecraft:fire_protection 4
-execute if score @e[tag=pad14,limit=1] var = #MAJORSUMMON var at @e[tag=pad14,limit=1] positioned ~-2 ~2 ~-3 run give @a[dx=4,dy=1,dz=6] minecraft:iron_block 1
+execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] positioned ~-3 ~2 ~-4 run enchant @a[dx=5,dy=1,dz=7] minecraft:flame 1
+execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] positioned ~-3 ~2 ~-4 run enchant @a[dx=5,dy=1,dz=7] minecraft:fire_aspect 1
+execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,limit=1] positioned ~-3 ~2 ~-4 run enchant @a[dx=5,dy=1,dz=7] minecraft:fire_protection 2
+execute if score @e[tag=pad14,limit=1] var = #MAJORSUMMON var at @e[tag=pad14,limit=1] positioned ~-3 ~2 ~-4 run give @a[dx=5,dy=1,dz=7] minecraft:iron_block 1
 
 # objective summons
 execute if score @e[tag=pad15,limit=1] var = #OBJECTIVESUMMON var at @e[tag=pad15,limit=1] run tp @e[tag=leftObjective] ~ ~3 ~
