@@ -13,6 +13,8 @@ execute if score #forcedRegen var = #TURNTRUE var run gamerule naturalRegenerati
 execute if score #forcedRegen var = #TURNTRUE var run effect give @a minecraft:regeneration 99999 0 true
 
 execute if score #forcedRegen var = #TURNFALSE var run gamerule naturalRegeneration true
+execute if score #forcedRegen var = #TURNFALSE var run effect clear @a minecraft:regeneration
+
 # flavour
 tellraw @s ""
 execute if score #forcedRegen var = #TURNFALSE var run tellraw @s [{"text":"Using ","color":"white"},{"text":"default Minecraft","color":"dark_red"},{"text":" regeneration rules.","color":"white"}]
