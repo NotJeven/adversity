@@ -142,9 +142,9 @@ execute if score @e[tag=pad13,limit=1] var = #MAJORSUMMON var at @e[tag=pad13,li
 execute if score @e[tag=pad14,limit=1] var = #MAJORSUMMON var at @e[tag=pad14,limit=1] positioned ~-3 ~2 ~-4 run give @a[dx=5,dy=1,dz=7] minecraft:iron_block 1
 
 # objective summons
-execute if score @e[tag=pad15,limit=1] var = #OBJECTIVESUMMON var at @e[tag=pad15,limit=1] run tp @e[tag=leftObjective] ~ ~3 ~
+execute if score @e[tag=pad15,limit=1] var = #OBJECTIVESUMMON var at @e[tag=pad15,limit=1] run tp @e[tag=leftObjective] ~ ~4 ~
 execute if score @e[tag=pad15,limit=1] var = #OBJECTIVESUMMON var run data merge entity @e[tag=leftObjective,limit=1] {Invulnerable:0b,Silent:0b,Glowing:1b}
-execute if score @e[tag=pad16,limit=1] var = #OBJECTIVESUMMON var at @e[tag=pad16,limit=1] run tp @e[tag=rightObjective] ~ ~3 ~
+execute if score @e[tag=pad16,limit=1] var = #OBJECTIVESUMMON var at @e[tag=pad16,limit=1] run tp @e[tag=rightObjective] ~ ~4 ~
 execute if score @e[tag=pad16,limit=1] var = #OBJECTIVESUMMON var run data merge entity @e[tag=rightObjective,limit=1] {Invulnerable:0b,Silent:0b,Glowing:1b}
 
 # clear objective area
@@ -157,7 +157,7 @@ execute as @e[tag=pad] run scoreboard players add #padCount var 1
 execute unless score #padCount var = #PADS var run function adversity:pad_objects
 
 # make sure the objective doesnt move
-execute if score #gameState var = #RUNNING var if entity @e[tag=objectivePad,scores={var=60..70}] at @e[tag=objectivePad,scores={var=60..70}] run tp @e[type=skeleton,sort=nearest,limit=1] ~ ~3 ~
+execute if score #gameState var = #RUNNING var if entity @e[tag=objectivePad,scores={var=60..70}] at @e[tag=objectivePad,scores={var=60..70}] run tp @e[type=skeleton,sort=nearest,limit=1] ~ ~4 ~
 execute as @e[tag=objectivePad,scores={var=0}] at @s run tp @e[type=skeleton,sort=nearest,limit=1] ~ ~-1 ~
 
 # map bounds; toggleBounds = true when confirmed outside of play area
