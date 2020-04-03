@@ -28,7 +28,7 @@ summon area_effect_cloud 571 23 13 {Duration:2147483647,CustomName:"\"Resistance
 summon area_effect_cloud 583 38 14 {Duration:2147483647,CustomName:"\"Strength\"",Tags:["pad","pad12","minorPad","effectPad","rightLane","a"]}
 
 # majors
-summon area_effect_cloud 594 41 0 {Duration:2147483647,CustomName:"\"Enchantment\"",Tags:["pad","pad13","majorPad"]}
+summon area_effect_cloud 592 41 0 {Duration:2147483647,CustomName:"\"Enchantment\"",Tags:["pad","pad13","majorPad"]}
 summon area_effect_cloud 592 19 0 {Duration:2147483647,CustomName:"\"Iron\"",Tags:["pad","pad14","majorPad"]}
 
 # objectives
