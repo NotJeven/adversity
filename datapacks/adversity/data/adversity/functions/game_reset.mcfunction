@@ -28,4 +28,5 @@ tellraw @a ""
 tellraw @a [{"text":"The map has been "},{"text":"reset","color":"light_purple"},{"text":".","color":"white"}]
 title @a subtitle [{"text":"The map has been "},{"text":"reset","color":"light_purple"},{"text":".","color":"white"}]
 title @a title ""
+function adversity:tooltip_create
 playsound minecraft:entity.cat.ambient master @a ~ ~ ~ 99 0 1
