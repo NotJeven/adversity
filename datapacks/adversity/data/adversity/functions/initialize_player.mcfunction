@@ -17,8 +17,8 @@ scoreboard players operation @a[tag=!initialized] leftPlayer = #FALSE var
 scoreboard players operation @a[tag=!initialized] var = #matchID var
 
 # move player
-teleport @a[tag=!initialized] 500 50 0 -90 10
-spawnpoint @a[tag=!initialized] 500 50 0
+teleport @a[tag=!initialized] 495 50 0 -90 10
+spawnpoint @a[tag=!initialized] 495 50 0
 
 # colourful things
 tellraw @a[tag=!initialized] [{"text":"Map: ","color":"white"},{"text":"Adversity","color":"gold"}]

@@ -12,12 +12,12 @@ kill @e[tag=tooltip]
 summon minecraft:area_effect_cloud 506 50 -26 {CustomNameVisible:1,CustomName:"\"§nBlue Spawn\"",Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 506 49.5 -26 {CustomNameVisible:1,CustomName:"\"The Blue team will spawn and\"",Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 506 49.25 -26 {CustomNameVisible:1,CustomName:"\"then respawn here with 12 health\"",Duration:2147483647,Tags:["tooltip"]}
-summon minecraft:area_effect_cloud 506 49 -26 {CustomNameVisible:1,CustomName:"\"(6 hearts) of absorbtion.\"",Duration:2147483647,Tags:["tooltip"]}
+summon minecraft:area_effect_cloud 506 49 -26 {CustomNameVisible:1,CustomName:"\"(6 hearts) of absorption.\"",Duration:2147483647,Tags:["tooltip"]}
 
 summon minecraft:area_effect_cloud 506 50 26 {CustomNameVisible:1,CustomName:"\"§nYellow Spawn\"",Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 506 49.5 26 {CustomNameVisible:1,CustomName:"\"The Yellow team will spawn and\"",Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 506 49.25 26 {CustomNameVisible:1,CustomName:"\"then respawn here with 12 health\"",Duration:2147483647,Tags:["tooltip"]}
-summon minecraft:area_effect_cloud 506 49 26 {CustomNameVisible:1,CustomName:"\"(6 hearts) of absorbtion.\"",Duration:2147483647,Tags:["tooltip"]}
+summon minecraft:area_effect_cloud 506 49 26 {CustomNameVisible:1,CustomName:"\"(6 hearts) of absorption.\"",Duration:2147483647,Tags:["tooltip"]}
 
 #temples
 summon minecraft:area_effect_cloud 521 40 -26 {CustomName:"\"§nBlue Temple\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
