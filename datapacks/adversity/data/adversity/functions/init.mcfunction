@@ -117,10 +117,12 @@ team modify notready color red
 bossbar add adversity:left ""
 bossbar set adversity:left color blue
 bossbar set adversity:left max 255
+bossbar set adversity:left name "Blue Pharaoh"
 
 bossbar add adversity:right ""
 bossbar set adversity:right color yellow
 bossbar set adversity:right max 255
+bossbar set adversity:right name "Yellow Pharaoh"
 
 # load the map chunks
 forceload add 500 -38 600 38
