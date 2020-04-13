@@ -1,3 +1,9 @@
+@font-face{
+	/*"WireWyrm" by zeimusu from https://fontlibrary.org/en/font/wirewyrm licensed OFL */
+	font-family: "WireWyrm";
+	src: url("WireWyrmMedium.otf") format("opentype");
+}
+
 html{
 	color: #efefef;
 	max-width: 50em;
@@ -9,6 +15,9 @@ html{
 	font-family: sans-serif;
 	line-height: 1.75em;
 	text-align: center;
+	font-family: 'WireWyrm';
+	font-weight: bolder;
+	font-size: 130%;
 }
 
 header{
@@ -24,19 +33,10 @@ footer{
 	padding-bottom: 2em;
 }
 
-h1{
+h1, h2, h3{
 	text-transform: uppercase;
 	color: #D7CDA5;
-}
-
-h2{
-	text-transform: uppercase;
-	color: #D7CDA5;
-}
-
-h3{
-	text-transform: uppercase;
-	color: #D7CDA5;
+	font-size: ;
 }
 
 a{
@@ -55,10 +55,10 @@ a:hover{
 }
 
 .download{
-	width: 15em;
 	display:inline-block;
 	background-color: #cc5200;
 	color: white;
+	width:100%;
 }
 
 .download:hover{
@@ -73,15 +73,17 @@ a:hover{
 
 .detail {
 	display: inline-block;
-	width: 15em;
+	flex-basis: 15em;
 	vertical-align: top;
 }
 
-
 img{
-	width: 24em;
+	font-size: initial;
+	flex-basis: 49%;
+	flex-grow: 1;
 	display: inline-block;
 	margin:.25em;
+
 }
 
 .blockp{
