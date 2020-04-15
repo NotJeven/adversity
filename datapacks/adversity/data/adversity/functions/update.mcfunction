@@ -173,3 +173,7 @@ execute as @a[team=!,tag=!inBounds,tag=toggleBounds] if entity @s run title @s a
 # objective boss bars
 execute if score #gameState var = #RUNNING var store result bossbar adversity:left value run data get entity @e[tag=leftObjective,limit=1] Health
 execute if score #gameState var = #RUNNING var store result bossbar adversity:right value run data get entity @e[tag=rightObjective,limit=1] Health
+
+# make spawn safe
+fill 505 47 -27 507 49 -25 minecraft:air replace
+fill 505 47 27 507 49 25 minecraft:air replace
