@@ -11,6 +11,7 @@ gamemode spectator @a[tag=!initialized]
 clear @a[tag=!initialized]
 effect give @a[tag=!initialized] minecraft:night_vision 99999 0 true
 effect give @a[tag=!initialized] minecraft:saturation 99999 0 true
+effect give @a[tag=!initialized] minecraft:regeneration 99999 0 true
 
 scoreboard players operation @a[tag=!initialized] leftPlayer = #FALSE var
 

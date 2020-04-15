@@ -97,8 +97,6 @@ scoreboard players set #MAJORLIGHTS var 60
 scoreboard players operation #gameCountdownSecond var = #1 var
 scoreboard players operation #menuHidden var = #FALSE var
 scoreboard players operation #autoReset var = #FALSE var
-scoreboard players operation #forcedRegen var = #FALSE var
-
 
 # teams
 team add a "Left"
