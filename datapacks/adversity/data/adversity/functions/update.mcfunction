@@ -53,8 +53,8 @@ execute if score #gameState var = #END var if score #autoReset var = #TRUE var r
 tp @a[x=550,y=50,z=0,distance=275..,gamemode=spectator] 500 51 0
 
 # pad trigger rewrite
-execute as @e[tag=pad,tag=!padTriggered] at @s if block ~ ~2 ~ minecraft:jungle_pressure_plate[powered=true] run function adversity:pad_triggered
-execute as @e[tag=pad,tag=padTriggered] at @s unless block ~ ~2 ~ minecraft:jungle_pressure_plate[powered=true] run tag @s remove padTriggered
+execute as @e[tag=pad,tag=!padTriggered] at @s if block ~ ~2 ~ #adversity:power_source[powered=true] run function adversity:pad_triggered
+execute as @e[tag=pad,tag=padTriggered] at @s unless block ~ ~2 ~ #adversity:power_source[powered=true] run tag @s remove padTriggered
 
 # pad lights
 execute as @e[tag=minorPad,tag=leftLane] if score @s var = #MINORPADL1 var at @s run fill ~1 ~1 ~2 ~1 ~1 ~2 minecraft:redstone_lamp[lit=true] replace minecraft:redstone_lamp
