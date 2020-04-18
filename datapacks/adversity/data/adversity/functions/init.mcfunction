@@ -12,6 +12,7 @@ scoreboard objectives add deathCount deathCount "Deaths"
 
 scoreboard objectives add triggerTeamJoin trigger
 scoreboard objectives add triggerTeamReady trigger
+scoreboard objectives add triggerAdmin trigger
 
 scoreboard objectives add leftPlayer minecraft.custom:minecraft.leave_game
 

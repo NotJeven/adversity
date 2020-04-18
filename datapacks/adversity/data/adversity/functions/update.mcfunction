@@ -33,6 +33,7 @@ execute if entity @a[scores={triggerTeamJoin=3}] run function adversity:team_joi
 execute if entity @a[scores={triggerTeamReady=1},team=a] run function adversity:team_ready_a
 execute if entity @a[scores={triggerTeamReady=1},team=b] run function adversity:team_ready_b
 execute if entity @a[scores={triggerTeamReady=1},team=spectator] run function adversity:team_ready_spectator
+execute if entity @a[scores={triggerAdmin=1}] run function adversity:remove_admin
 
 # start/stop the game
 execute if score #teamReadyA var = #READY var if score #teamReadyB var = #READY var if score #teamReadySpectator var = #READY var if score #gameState var = #IDLE var run function adversity:game_countdown_start
