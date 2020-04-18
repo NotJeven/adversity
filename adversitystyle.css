@@ -39,6 +39,10 @@ h1, h2, h3{
 	font-size: ;
 }
 
+h1{
+	font-size: 400%;
+}
+
 a{
 	color: #cc5200;
 	text-decoration: none;
