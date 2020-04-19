@@ -7,6 +7,7 @@
 
 
 team join spectator @a[scores={triggerTeamJoin=3}]
+spawnpoint @a[scores={triggerTeamJoin=3}] 500 50 0
 
 # items
 tag @a[scores={triggerTeamJoin=3}] add giveItems

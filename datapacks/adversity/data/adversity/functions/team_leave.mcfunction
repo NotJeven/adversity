@@ -6,6 +6,7 @@
 #		update:update
 
 team leave @a[scores={triggerTeamJoin=-1}]
+spawnpoint @a[scores={triggerTeamJoin=-1}] 500 50 0
 
 #items 
 clear @a[scores={triggerTeamJoin=-1}]

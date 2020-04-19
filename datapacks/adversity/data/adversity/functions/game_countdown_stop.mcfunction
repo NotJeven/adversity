@@ -8,3 +8,6 @@
 
 scoreboard players operation #gameState var = #IDLE var 
 scoreboard players operation #gameCountdown var = #COUNTDOWNTIME var
+
+# move players back to specator mode
+gamemode spectator @a[gamemode=!spectator,team=!]
