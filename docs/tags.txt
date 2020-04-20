@@ -51,3 +51,6 @@ itemPad
 
 effectPad 
 	ids minor pad objects that have effect summons
+
+tooltip
+	ids tooltip area effect clouds
