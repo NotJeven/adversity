@@ -8,7 +8,7 @@
 
 team join b @a[scores={triggerTeamJoin=2}]
 clear @a[scores={triggerTeamJoin=2}]
-spawnpoint @a[scores={triggerTeamJoin=2}] 506 50 26
+spawnpoint @a[scores={triggerTeamJoin=2}] 506 47 26
 
 # flavour
 tellraw @a[scores={triggerTeamJoin=2}] [{"text":"You rallied with the ","color":"white"},{"text":"Yellow","color":"yellow"},{"text":" banners.","color":"white"}]

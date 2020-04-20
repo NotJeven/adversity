@@ -18,8 +18,9 @@ scoreboard players operation #gameState var = #RUNNING var
 # player things
 gamemode survival @a[team=a]
 gamemode survival @a[team=b]
-spawnpoint @a[team=a] 506 47 -26
-spawnpoint @a[team=b] 506 47 26
+effect clear @a minecraft:weakness
+effect clear @a minecraft:jump_boost
+effect clear @a minecraft:slowness
 
 # objective things
 kill @e[type=skeleton]
@@ -43,8 +44,8 @@ scoreboard players reset @a triggerTeamJoin
 scoreboard players reset @a triggerTeamReady
 
 # open the boxes
-fill 504 49 -24 508 52 -28 minecraft:air replace minecraft:barrier
-fill 504 49 24 508 52 28 minecraft:air replace minecraft:barrier
+fill 504 47 -24 508 49 -28 minecraft:air replace minecraft:barrier
+fill 504 47 24 508 49 28 minecraft:air replace minecraft:barrier
 
 # set stats
 scoreboard players set @a killCount 0
