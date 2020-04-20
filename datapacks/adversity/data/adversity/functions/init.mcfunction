@@ -8,7 +8,6 @@
 # "scoreboard objectives add var dummy" defined in adversity:load
 scoreboard objectives add sinceDeath minecraft.custom:minecraft.time_since_death
 
-scoreboard objectives add deathCount deathCount "Deaths"
 
 scoreboard objectives add triggerTeamJoin trigger
 scoreboard objectives add triggerTeamReady trigger
@@ -18,6 +17,15 @@ scoreboard objectives add leftPlayer minecraft.custom:minecraft.leave_game
 
 scoreboard objectives add sidebarDisplay dummy "Adversity"
 scoreboard objectives setdisplay sidebar sidebarDisplay
+
+# stats!
+scoreboard objectives add killCount playerKillCount "Kills"
+scoreboard objectives add deathCount deathCount "Deaths"
+scoreboard objectives add shotCount minecraft.used:minecraft.bow "Shots Fired"
+scoreboard objectives add damageCount minecraft.custom:minecraft.damage_dealt "Melee Dealt"
+scoreboard objectives add absorbedCount minecraft.custom:minecraft.damage_taken "Damage Taken"
+scoreboard objectives add ritualCount dummy "Rituals Performed"
+scoreboard objectives add summonCount dummy "Rituals Performed"
 
 # CONSTANTS
 # game states
@@ -48,6 +56,7 @@ scoreboard players set #5SECONDS var 100
 scoreboard players set #COUNTDOWNTIME var 120
 scoreboard players set #RESETTIME var 1300
 scoreboard players set #RESETTIMEBUF var 1200
+scoreboard players set #STATLENGTH var 120
 
 # numbers
 scoreboard players set #1 var 1

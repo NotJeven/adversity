@@ -35,5 +35,34 @@ scoreboard objectives setdisplay sidebar sidebarDisplay
 bossbar set adversity:left visible false
 bossbar set adversity:right visible false
 
+# stats
+scoreboard players operation #currentStat var = #0 var
+scoreboard players operation #statTime var = #STATLENGTH var
+
+scoreboard players reset * killCount
+scoreboard players reset * deathCount
+scoreboard players reset * shotCount
+scoreboard players reset * damageCount
+scoreboard players reset * absorbedCount
+scoreboard players reset * ritualCount
+scoreboard players reset * summonCount
+
+#§e is yellow; §9 is blue
+scoreboard players set §9Wood ritualCount 0
+scoreboard players set §9Gold ritualCount 0
+scoreboard players set §9Arrow ritualCount 0
+scoreboard players set §9TNT ritualCount 0
+scoreboard players set §9Strength ritualCount 0
+scoreboard players set §9Resistance ritualCount 0
+scoreboard players set §eWood ritualCount 0
+scoreboard players set §eGold ritualCount 0
+scoreboard players set §eArrow ritualCount 0
+scoreboard players set §eTNT ritualCount 0
+scoreboard players set §eStrength ritualCount 0
+scoreboard players set §eResistance ritualCount 0
+scoreboard players set §fEnchantment ritualCount 0
+scoreboard players set §fIron ritualCount 0
+
+
 # match id
 execute store result score #matchID var run time query gametime

@@ -45,3 +45,11 @@ scoreboard players reset @a triggerTeamReady
 # open the boxes
 fill 504 49 -24 508 52 -28 minecraft:air replace minecraft:barrier
 fill 504 49 24 508 52 28 minecraft:air replace minecraft:barrier
+
+# set stats
+scoreboard players set @a killCount 0
+scoreboard players set @a deathCount 0
+scoreboard players set @a shotCount 0
+scoreboard players set @a damageCount 0
+scoreboard players set @a absorbedCount 0
+scoreboard players set @a summonCount 0
