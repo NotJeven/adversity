@@ -14,5 +14,5 @@ execute if score #currentStat var matches 5 run scoreboard objectives setdisplay
 execute if score #currentStat var matches 6 run scoreboard objectives setdisplay sidebar summonCount
 
 scoreboard players operation #statTime var = #0 var
-execute if score #currentStat var matches 6 run scoreboard players set #currentStat var 0
+execute if score #currentStat var matches 6 run scoreboard players set #currentStat var -1
 execute unless score #currentStat var matches 6 run scoreboard players add #currentStat var 1

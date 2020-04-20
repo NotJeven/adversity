@@ -5,14 +5,16 @@
 #	Parents:
 #		adversity:update
 tellraw @a ""
-execute if entity @e[tag=leftObjective] run tellraw @a [{"text":"Blue","color":"blue"},{"text":" victory!","color":"white"}]
-execute if entity @e[tag=leftObjective] run title @a subtitle [{"text":"Blue","color":"blue"},{"text":" victory!","color":"white"}]
-execute if entity @e[tag=rightObjective] run tellraw @a [{"text":"Yellow","color":"yellow"},{"text":" victory!","color":"white"}]
-execute if entity @e[tag=rightObjective] run title @a subtitle [{"text":"Yellow","color":"yellow"},{"text":" victory!","color":"white"}]
+execute if entity @e[tag=leftObjective] run tellraw @a [{"text":"The "},{"text":"Blue","color":"blue"},{"text":" banners are victorious!","color":"white"}]
+execute if entity @e[tag=leftObjective] run title @a subtitle [{"text":"The "},{"text":"Blue","color":"blue"},{"text":" banners are victorious!","color":"white"}]
+execute if entity @e[tag=rightObjective] run tellraw @a [{"text":"The "},{"text":"Yellow","color":"yellow"},{"text":" banners are victorious!","color":"white"}]
+execute if entity @e[tag=rightObjective] run title @a subtitle [{"text":"The "},{"text":"Yellow","color":"yellow"},{"text":" banners are victorious!","color":"white"}]
 title @a title ""
 tellraw @a ""
 
 playsound minecraft:entity.wither.spawn master @a ~ ~ ~ 1 0.5 1
+
+effect give @a minecraft:blindness 3 1 true
 
 tag @a[tag=menuAdmin] add menuRequest
 function adversity:menu_admin

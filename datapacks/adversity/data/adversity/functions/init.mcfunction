@@ -101,6 +101,7 @@ scoreboard players set #MAJORPADL14 var 840
 scoreboard players set #MINORLIGHTS var 40
 scoreboard players set #MAJORLIGHTS var 60
 
+scoreboard players set #MAJORSOUND var 330
 # END CONSTANTS
 
 # things to be only defined once

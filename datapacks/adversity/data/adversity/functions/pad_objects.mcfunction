@@ -32,7 +32,7 @@ summon area_effect_cloud 592 41 0 {Duration:2147483647,CustomName:"\"Enchantment
 summon area_effect_cloud 592 19 0 {Duration:2147483647,CustomName:"\"Iron\"",Tags:["pad","pad14","majorPad"]}
 
 # objectives
-summon area_effect_cloud 521 27 -26 {Duration:2147483647,CustomName:"\"Skeleton\"",Tags:["pad","pad15","objectivePad"]}
-summon area_effect_cloud 521 27 26 {Duration:2147483647,CustomName:"\"Skeleton\"",Tags:["pad","pad16","objectivePad"]}
+summon area_effect_cloud 521 27 -26 {Duration:2147483647,CustomName:"\"Pharaoh\"",Tags:["pad","pad15","objectivePad"]}
+summon area_effect_cloud 521 27 26 {Duration:2147483647,CustomName:"\"Pharaoh\"",Tags:["pad","pad16","objectivePad"]}
 
 scoreboard players set @e[tag=pad] var 0
