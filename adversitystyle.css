@@ -36,11 +36,11 @@ footer{
 h1, h2, h3{
 	text-transform: uppercase;
 	color: #D7CDA5;
-	font-size: ;
 }
 
 h1{
 	font-size: 400%;
+	font-size: 10vw;
 }
 
 a{
