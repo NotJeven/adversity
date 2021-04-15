@@ -18,6 +18,8 @@ scoreboard objectives add leftPlayer minecraft.custom:minecraft.leave_game
 scoreboard objectives add sidebarDisplay dummy "Adversity"
 scoreboard objectives setdisplay sidebar sidebarDisplay
 
+scoreboard objectives add food food
+
 # stats!
 scoreboard objectives add killCount playerKillCount "Kills"
 scoreboard objectives add deathCount deathCount "Deaths"
@@ -108,7 +110,6 @@ scoreboard players set #MAJORSOUND var 330
 scoreboard players operation #gameCountdownSecond var = #1 var
 scoreboard players operation #menuHidden var = #FALSE var
 scoreboard players operation #autoReset var = #FALSE var
-scoreboard players operation #customRegen var = #TRUE var
 
 # teams
 team add a "Left"

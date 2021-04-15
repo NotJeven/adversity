@@ -13,6 +13,10 @@ execute if entity @a[tag=initialized,scores={leftPlayer=1..}] run function adver
 # deal with new players when they log in for the first time
 execute if entity @a[tag=!initialized] run function adversity:initialize_player
 
+# FEED THEM - Moesh was using this in Calamity... it heals 0.00125 health/tick which is the same rate as 1.8 so I kind of like it.
+effect give @a[scores={food=..19}] minecraft:saturation 1 0 false
+effect clear @a[scores={food=20}] minecraft:saturation
+
 # death handlers
 tag @a[scores={sinceDeath=0},tag=!dead] add dead
 execute if entity @a[scores={sinceDeath=1..},tag=dead] run function adversity:alive
