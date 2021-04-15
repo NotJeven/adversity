@@ -25,8 +25,8 @@ effect clear @a minecraft:slowness
 # objective things
 kill @e[type=skeleton]
 scoreboard objectives setdisplay sidebar
-execute at @e[tag=pad15] run summon skeleton ~ ~ ~ {CustomName:"\"Pharaoh\"",Attributes:[{Base:255.0d,Name:"generic.maxHealth"},{Base:1.0d,Name:"generic.knockbackResistance"}],Health:255.0f,PersistenceRequired:true,Tags:["leftObjective"],Invulnerable:1b,Silent:1b,Glowing:0b,NoGravity:1b,CanPickUpLoot:1b,HandItems:[{Count:1b,id:"minecraft:bow",tag:{Enchantments:[{id:"minecraft:punch",lvl:2},{id:"minecraft:flame",lvl:2},{id:"minecraft:power",lvl:2}]}}]}
-execute at @e[tag=pad16] run summon skeleton ~ ~ ~ {CustomName:"\"Pharaoh\"",Attributes:[{Base:255.0d,Name:"generic.maxHealth"},{Base:1.0d,Name:"generic.knockbackResistance"}],Health:255.0f,PersistenceRequired:true,Tags:["rightObjective"],Invulnerable:1b,Silent:1b,Glowing:0b,NoGravity:1b,CanPickUpLoot:1b,HandItems:[{Count:1b,id:"minecraft:bow",tag:{Enchantments:[{id:"minecraft:punch",lvl:2},{id:"minecraft:flame",lvl:2},{id:"minecraft:power",lvl:2}]}}]}
+execute at @e[tag=pad15] run summon skeleton ~ ~ ~ {CustomName:"\"Pharaoh\"",Attributes:[{Base:255.0d,Name:"generic.max_health"},{Base:1.0d,Name:"generic.knockback_resistance"}],Health:255.0f,PersistenceRequired:true,Tags:["leftObjective"],Invulnerable:1b,Silent:1b,Glowing:0b,NoGravity:1b,CanPickUpLoot:1b,HandItems:[{Count:1b,id:"minecraft:bow",tag:{Enchantments:[{id:"minecraft:punch",lvl:2},{id:"minecraft:flame",lvl:2},{id:"minecraft:power",lvl:2}]}}]}
+execute at @e[tag=pad16] run summon skeleton ~ ~ ~ {CustomName:"\"Pharaoh\"",Attributes:[{Base:255.0d,Name:"generic.max_health"},{Base:1.0d,Name:"generic.knockback_resistance"}],Health:255.0f,PersistenceRequired:true,Tags:["rightObjective"],Invulnerable:1b,Silent:1b,Glowing:0b,NoGravity:1b,CanPickUpLoot:1b,HandItems:[{Count:1b,id:"minecraft:bow",tag:{Enchantments:[{id:"minecraft:punch",lvl:2},{id:"minecraft:flame",lvl:2},{id:"minecraft:power",lvl:2}]}}]}
 team join a @e[tag=leftObjective]
 team join b @e[tag=rightObjective]
 
