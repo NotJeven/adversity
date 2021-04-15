@@ -54,14 +54,14 @@ summon minecraft:area_effect_cloud 572 54 15 {CustomName:"\"supporting fire on t
 #objective
 summon minecraft:area_effect_cloud 521 32 -26 {CustomName:"\"§nBlue Pharaoh Ritual\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 521 31.5 -26 {CustomName:"\"A 3 second ritual. Summons a 255 health skeleton with\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
-summon minecraft:area_effect_cloud 521 31.25 -26 {CustomName:"\"a power 2, punch 2, flame 2 bow. It will only attack enemy\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
+summon minecraft:area_effect_cloud 521 31.25 -26 {CustomName:"\"a power 1, punch 1, flame 1 bow. It will only attack enemy\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 521 31 -26 {CustomName:"\"players and can be dismissed by reactivating the ritual.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 521 30.75 -26 {CustomName:"\"This ritual does not have a pressure plate when the match starts.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 521 30.5 -26 {CustomName:"\"The first team to kill the enemy Pharaoh wins.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 
 summon minecraft:area_effect_cloud 521 32 26 {CustomName:"\"§nYellow Pharaoh Ritual\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 521 31.5 26 {CustomName:"\"A 3 second ritual. Summons a 255 health skeleton with\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
-summon minecraft:area_effect_cloud 521 31.25 26 {CustomName:"\"a power 2, punch 2, flame 2 bow. It will only attack enemy\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
+summon minecraft:area_effect_cloud 521 31.25 26 {CustomName:"\"a power 1, punch 1, flame 1 bow. It will only attack enemy\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 521 31 26 {CustomName:"\"players and can be dismissed by reactivating the ritual.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 521 30.75 26 {CustomName:"\"This ritual does not have a pressure plate when the match starts.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 521 30.5 26 {CustomName:"\"The first team to kill the enemy Pharaoh wins.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
