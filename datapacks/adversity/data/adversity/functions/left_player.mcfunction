@@ -9,10 +9,6 @@ tellraw @a[scores={leftPlayer=1},tag=initialized,tag=!menuAdmin] [{"text":"Ident
 tellraw @a[scores={leftPlayer=1},tag=initialized,tag=menuAdmin] [{"text":"You are a server "},{"text":"admin","color":"gold"},{"text":". "},{"text":"Remove","color":"red","underlined":"true","clickEvent":{"action":"run_command","value":"/trigger triggerAdmin set 1"},"hoverEvent":{"action":"show_text","value":"Remove admin status and the admin menu.\nAccessible to players without server operator status."}},{"text":" admin status.","color":"white","underlined":"false"}]
 scoreboard players enable @a[scores={leftPlayer=1},tag=initialized] triggerAdmin
 
-# natural regeneration
-execute if score #customRegen var = #TRUE var run effect give @a[scores={leftPlayer=1..},tag=initialized] minecraft:regeneration 99999 0 true
-execute if score #customRegen var = #FALSE var run effect clear @a[scores={leftPlayer=1..},tag=initialized] minecraft:regeneration
-
 # give menu
 execute if score #gameState var = #IDLE var run tag @a[scores={leftPlayer=1..},tag=initialized] add menuRequest
 execute if score #gameState var = #COUNTDOWN var run tag @a[scores={leftPlayer=1..},tag=initialized] add menuRequest
