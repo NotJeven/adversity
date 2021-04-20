@@ -39,7 +39,7 @@ h1, h2, h3{
 }
 
 h1{
-	font-size: 400%;
+	font-size: 4em;
 	font-size: 10vw;
 }
 
@@ -87,7 +87,8 @@ img{
 	flex-grow: 1;
 	display: inline-block;
 	margin:.25em;
-
+	width:0;
+	min-width:100%;
 }
 
 .blockp{
