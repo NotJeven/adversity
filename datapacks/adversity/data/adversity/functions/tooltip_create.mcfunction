@@ -56,15 +56,17 @@ summon minecraft:area_effect_cloud 521 32 -26 {CustomName:"\"§nBlue Pharaoh Rit
 summon minecraft:area_effect_cloud 521 31.5 -26 {CustomName:"\"A 3 second ritual. Summons a 255 health skeleton with\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 521 31.25 -26 {CustomName:"\"a power 1, punch 1, flame 1 bow. It will only attack enemy\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 521 31 -26 {CustomName:"\"players and can be dismissed by reactivating the ritual.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
-summon minecraft:area_effect_cloud 521 30.75 -26 {CustomName:"\"This ritual does not have a pressure plate when the match starts.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
-summon minecraft:area_effect_cloud 521 30.5 -26 {CustomName:"\"The first team to kill the enemy Pharaoh wins.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
+summon minecraft:area_effect_cloud 521 30.75 -26 {CustomName:"\"When summoned, all blocks in this 5x5x5 ritual zone will be deleted.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
+summon minecraft:area_effect_cloud 521 30.5 -26 {CustomName:"\"This ritual does not have a pressure plate when the match starts.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
+summon minecraft:area_effect_cloud 521 30.25 -26 {CustomName:"\"The first team to kill the enemy Pharaoh wins.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 
 summon minecraft:area_effect_cloud 521 32 26 {CustomName:"\"§nYellow Pharaoh Ritual\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 521 31.5 26 {CustomName:"\"A 3 second ritual. Summons a 255 health skeleton with\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 521 31.25 26 {CustomName:"\"a power 1, punch 1, flame 1 bow. It will only attack enemy\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 summon minecraft:area_effect_cloud 521 31 26 {CustomName:"\"players and can be dismissed by reactivating the ritual.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
-summon minecraft:area_effect_cloud 521 30.75 26 {CustomName:"\"This ritual does not have a pressure plate when the match starts.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
-summon minecraft:area_effect_cloud 521 30.5 26 {CustomName:"\"The first team to kill the enemy Pharaoh wins.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
+summon minecraft:area_effect_cloud 521 30.75 26 {CustomName:"\"When summoned, all blocks in this 5x5x5 ritual zone will be deleted.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
+summon minecraft:area_effect_cloud 521 30.5 26 {CustomName:"\"This ritual does not have a pressure plate when the match starts.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
+summon minecraft:area_effect_cloud 521 30.25 26 {CustomName:"\"The first team to kill the enemy Pharaoh wins.\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
 
 #bottom
 summon minecraft:area_effect_cloud 583 33 -9 {CustomName:"\"§nBlue Bottom Lane\"",CustomNameVisible:1,Duration:2147483647,Tags:["tooltip"]}
