@@ -130,7 +130,7 @@ execute as @e[tag=pad] run scoreboard players add #padCount var 1
 execute unless score #padCount var = #PADS var run function adversity:pad_objects
 
 # make sure the objective doesnt move
-execute if score #gameState var = #RUNNING var if entity @e[tag=objectivePad,scores={var=60..70}] at @e[tag=objectivePad,scores={var=60..70}] run tp @e[type=skeleton,sort=nearest,limit=1] ~ ~4 ~
+execute if score #gameState var = #RUNNING var if entity @e[tag=objectivePad,scores={var=60..70}] at @e[tag=objectivePad,scores={var=60..70}] run tp @e[type=skeleton,sort=nearest,limit=1] ~ ~3 ~
 execute if score #gameState var = #RUNNING var as @e[tag=objectivePad,scores={var=0}] at @s run tp @e[type=skeleton,sort=nearest,limit=1] ~ ~-1 ~
 
 # map bounds; toggleBounds = true when confirmed outside of play area
