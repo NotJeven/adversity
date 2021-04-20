@@ -121,8 +121,8 @@ execute as @e[tag=objectivePad] if score @s var = #OBJECTIVESUMMON var run funct
 
 
 # clear objective area
-execute if score @e[tag=pad15,limit=1] var > #OBJECTIVESUMMON var run fill 520 33 -27 522 29 -25 minecraft:air replace #adversity:all_blocks
-execute if score @e[tag=pad16,limit=1] var > #OBJECTIVESUMMON var run fill 520 33 27 522 29 25 minecraft:air replace #adversity:all_blocks
+execute if score @e[tag=pad15,limit=1] var > #OBJECTIVESUMMON var run fill 519 33 -28 523 29 -24 minecraft:air replace #adversity:all_blocks
+execute if score @e[tag=pad16,limit=1] var > #OBJECTIVESUMMON var run fill 519 33 28 523 29 24 minecraft:air replace #adversity:all_blocks
 
 # if the pad objects die for some reason....
 execute if score #padCount var > #0 var run scoreboard players set #padCount var 0
